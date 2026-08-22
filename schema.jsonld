@@ -1,0 +1,39 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://mdv1.vercel.app/#musa-divarci",
+  "name": "Musa DİVARCI",
+  "alternateName": ["Musa Divarcı", "Musa Divarci"],
+  "url": "https://mdv1.vercel.app/",
+  "jobTitle": [
+    "Software Developer",
+    "Information Technologies Specialist",
+    "CTO",
+    "IT Coordinator",
+    "Project Coordinator"
+  ],
+  "knowsAbout": [
+    "Software Development",
+    "Web Application Development",
+    "ASP",
+    ".NET",
+    "C#",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Python",
+    "SQL",
+    "Information Technologies",
+    "System Engineering",
+    "Network Architecture",
+    "Cisco Networking",
+    "Microsoft Technologies",
+    "Enterprise IT",
+    "Technology Strategy",
+    "Technical Leadership",
+    "Public-sector IT",
+    "IT Coordination",
+    "Project Coordination"
+  ],
+  "description": "Technology professional with professional software development experience since 2001, spanning software development, information technologies, systems and networks, CTO-level technology leadership, public-sector IT coordination within Türkiye's Ministry of National Education, and project coordination."
+}
