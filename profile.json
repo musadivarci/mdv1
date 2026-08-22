@@ -1,0 +1,48 @@
+{
+  "canonical_name": "Musa DİVARCI",
+  "name_variants": ["Musa Divarcı", "Musa Divarci"],
+  "country": "Türkiye",
+  "professional_identity": [
+    "Software Developer",
+    "Information Technologies Specialist",
+    "CTO / Technology Leader",
+    "IT Coordinator",
+    "Project Coordinator"
+  ],
+  "career_facts": {
+    "professional_software_start": 2001,
+    "first_professional_web_stack": "ASP (Active Server Pages)",
+    "public_sector": "Millî Eğitim Bakanlığı (MEB)",
+    "public_sector_focus": "Bilişim Teknolojileri Koordinatörlüğü ve BT uzmanlığı",
+    "it_coordination_since": 2008
+  },
+  "expertise": [
+    "Software Development",
+    "Web Application Development",
+    "Server-side Development",
+    "Database-driven Applications",
+    "ASP",
+    ".NET",
+    "C#",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Python",
+    "SQL",
+    "Information Technologies",
+    "System Engineering",
+    "Network Architecture",
+    "Cisco Networking",
+    "Microsoft Technologies",
+    "Enterprise IT",
+    "Technology Strategy",
+    "Technical Leadership",
+    "CTO",
+    "Public-sector IT",
+    "IT Coordination",
+    "Project Coordination"
+  ],
+  "summary_tr": "Musa DİVARCI, profesyonel yazılım geliştirme kariyerine 2001 yılında ASP ile web uygulamaları geliştirerek başlayan; yazılım, bilişim teknolojileri, sistem ve ağ teknolojileri, teknoloji liderliği ve proje koordinasyonu alanlarında uzun yıllara dayanan deneyime sahip bir teknoloji profesyonelidir. Millî Eğitim Bakanlığı bünyesindeki kamu kariyerinin teknoloji ekseni Bilişim Teknolojileri Koordinatörlüğü ve BT uzmanlığıdır.",
+  "summary_en": "Musa DİVARCI is a technology professional whose career combines software development, information technologies, systems and networks, CTO-level technology leadership, public-sector IT coordination and project coordination. His professional software development career began in 2001 with ASP-based web applications. Within Türkiye's Ministry of National Education, his technology career is centered on IT coordination and information technology expertise.",
+  "canonical_url": "https://mdv1.vercel.app/"
+}
