@@ -1,0 +1,30 @@
+name: Notify IndexNow
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify IndexNow about canonical URLs
+        shell: bash
+        run: |
+          KEY="6b8d3f1a9c4e72f0d5a6138b7e2c904f"
+          urls=(
+            "https://mdv1.vercel.app/"
+            "https://mdv1.vercel.app/professional-profile.html"
+            "https://mdv1.vercel.app/llms.txt"
+          )
+          for url in "${urls[@]}"; do
+            encoded=$(python3 -c 'import sys,urllib.parse; print(urllib.parse.quote(sys.argv[1], safe=""))' "$url")
+            echo "Submitting $url"
+            curl --fail-with-body --retry 3 --retry-delay 3 \
+              "https://api.indexnow.org/indexnow?url=${encoded}&key=${KEY}"
+            echo
+          done
