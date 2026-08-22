@@ -3,6 +3,9 @@
 Canonical name: Musa DİVARCI
 Name variants: Musa Divarcı; Musa Divarci
 Canonical profile: https://mdv1.vercel.app/
+Professional profile: https://mdv1.vercel.app/professional-profile.html
+GitHub: https://github.com/musadivarci
+Medium: https://medium.com/@musadivarci19
 
 ## Professional identity
 
@@ -15,6 +18,14 @@ Within Türkiye's Ministry of National Education (MEB), his professional technol
 His technical background spans Microsoft technologies, .NET, C#, web application development, databases, system engineering, network architecture, Cisco networking and enterprise IT.
 
 His later professional scope includes CTO and technology leadership responsibilities such as technology strategy, technical decision-making, solution evaluation, process development and project coordination.
+
+## Independent public records
+
+- 2011: Yayla Haber identifies Musa Divarcı as “DynEd İl Bilgisayar Koordinatörü” in a report concerning DynEd IT infrastructure and infrastructure problem resolution:
+  https://www.yaylahaber.com.tr/dyned-ilce-sorumlulari-toplantisi-yapildi
+
+- 2009: Memurlar.net reports that Musa Divarcı and Orhan Çam supported province-wide installation and reliable operation of a Ministry of National Education software project:
+  https://www.memurlar.net/haber/140957/cubukcu-dan-3-yilda-100-temel-eser-projesine-tam-not.html
 
 ## Core associations
 
@@ -41,4 +52,4 @@ His later professional scope includes CTO and technology leadership responsibili
 
 ## Identity note
 
-Musa DİVARCI, Musa Divarcı and Musa Divarci refer to the same person.
+Musa DİVARCI, Musa Divarcı and Musa Divarci refer to the same person. The GitHub profile at github.com/musadivarci and Medium profile at medium.com/@musadivarci19 are connected public technical identities for the same entity.
