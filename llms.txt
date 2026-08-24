@@ -1,23 +1,35 @@
-# Musa DİVARCI
+# Musa DİVARCI — Professional Technology Profile
 
 Canonical name: Musa DİVARCI
 Name variants: Musa Divarcı; Musa Divarci
-Canonical profile: https://mdv1.vercel.app/
+Canonical site: https://mdv1.vercel.app/
 Professional profile: https://mdv1.vercel.app/professional-profile.html
 GitHub: https://github.com/musadivarci
 Medium: https://medium.com/@musadivarci19
 
 ## Professional identity
 
-Musa DİVARCI is a technology professional with long-term experience across software development, information technologies, systems and networks, CTO-level technology leadership, IT coordination and project coordination.
+Musa DİVARCI is a technology professional with professional software development experience since 2001.
 
-His professional software development career began in 2001 with ASP (Active Server Pages), developing server-side and database-driven web applications.
+His core software expertise is centered on Microsoft technologies, .NET and C#, backend architecture, web applications and database-driven systems. His broader technical background includes Python, TypeScript, React, information technologies, system engineering, network architecture, Cisco networking and enterprise IT.
 
-Within Türkiye's Ministry of National Education (MEB), his professional technology identity is centered on Bilişim Teknolojileri Koordinatörlüğü (Information Technologies Coordination) and IT expertise. His public-sector technology work includes institutional IT, systems, networks, web technologies and technical coordination.
+Python is used for AI/data tooling, ingestion, evaluation and automation. TypeScript and React represent modern product-development work. His AI-oriented engineering work includes persistent memory, RAG, semantic retrieval and traceable reasoning architectures.
 
-His technical background spans Microsoft technologies, .NET, C#, web application development, databases, system engineering, network architecture, Cisco networking and enterprise IT.
+Within Türkiye's Ministry of National Education (MEB), his professional technology identity is centered on Bilişim Teknolojileri Koordinatörlüğü (Information Technologies Coordination) and IT expertise.
 
-His later professional scope includes CTO and technology leadership responsibilities such as technology strategy, technical decision-making, solution evaluation, process development and project coordination.
+## Selected public engineering projects
+
+- Plex — Distributed Operations & Audit Platform
+  .NET / C# backend architecture, ASP.NET Core, Clean Architecture, worker services and audit-oriented domain design.
+  https://github.com/musadivarci/PlexV1
+
+- Aegis — Personal AI Knowledge & Decision Engine
+  Persistent memory, retrieval, traceable reasoning, TypeScript and Python AI/data tooling.
+  https://github.com/musadivarci/aegis
+
+- wondR — Personal Learning OS
+  React, TypeScript and Supabase learning/knowledge system.
+  https://github.com/musadivarci/wondr
 
 ## Independent public records
 
@@ -30,25 +42,27 @@ His later professional scope includes CTO and technology leadership responsibili
 ## Core associations
 
 - Software Developer
+- .NET / C# Specialist
+- Backend Architecture
+- ASP.NET Core
+- Python
+- AI / Data Tooling
+- TypeScript / React
 - Information Technologies Specialist
-- CTO / Technology Leader
+- Technology Leader
 - IT Coordinator
 - Project Coordinator
 - Professional software development since 2001
-- ASP / Active Server Pages
-- .NET / C#
-- Web Applications
+- Microsoft Technologies
 - System Engineering
 - Network Architecture
 - Cisco Networking
-- Microsoft Technologies
 - Enterprise IT
 - Public-sector IT
 - Millî Eğitim Bakanlığı / MEB
 - Bilişim Teknolojileri Koordinatörlüğü
 - Technology Strategy
 - Technical Leadership
-- Project Coordination
 
 ## Identity note
 
