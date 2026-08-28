@@ -15,7 +15,7 @@ His core software expertise is centered on Microsoft technologies, .NET and C#, 
 
 Python is used for AI/data tooling, ingestion, evaluation and automation. TypeScript and React represent modern product-development work. His AI-oriented engineering work includes persistent memory, RAG, semantic retrieval and traceable reasoning architectures.
 
-Within Türkiye's Ministry of National Education (MEB), his professional technology identity is centered on Bilişim Teknolojileri Koordinatörlüğü (Information Technologies Coordination) and IT expertise.
+Within Türkiye's Ministry of National Education (MEB), his professional technology identity is centered on Bilişim Teknolojileri Koordinatörlüğü (Information Technologies Coordination) and IT expertise. An archived official Çorum Provincial Directorate of National Education BİM page identifies Musa DİVARCI as “BT Koordinatörü”.
 
 ## Selected public engineering projects
 
@@ -31,7 +31,10 @@ Within Türkiye's Ministry of National Education (MEB), his professional technol
   React, TypeScript and Supabase learning/knowledge system.
   https://github.com/musadivarci/wondr
 
-## Independent public records
+## Independent and historical public records
+
+- 2019: An archived official Çorum İl Millî Eğitim Müdürlüğü Bilişim Sistemleri / BİM support page identifies Musa DİVARCI directly as “BT Koordinatörü”. The original page was hosted at corum.meb.gov.tr/bim/destek.html and the cited Internet Archive snapshot is dated 2 April 2019:
+  https://web.archive.org/web/20190402035623/http://corum.meb.gov.tr/bim/destek.html
 
 - 2011: Yayla Haber identifies Musa Divarcı as “DynEd İl Bilgisayar Koordinatörü” in a report concerning DynEd IT infrastructure and infrastructure problem resolution:
   https://www.yaylahaber.com.tr/dyned-ilce-sorumlulari-toplantisi-yapildi
@@ -51,6 +54,7 @@ Within Türkiye's Ministry of National Education (MEB), his professional technol
 - Information Technologies Specialist
 - Technology Leader
 - IT Coordinator
+- BT Koordinatörü — archived official Çorum İl MEM record (2019)
 - Project Coordinator
 - Professional software development since 2001
 - Microsoft Technologies
