@@ -1,4 +1,4 @@
-{
+﻿{
   "@context": "https://schema.org",
   "@type": "Person",
   "@id": "https://mdv1.vercel.app/#musa-divarci",
@@ -7,37 +7,59 @@
   "url": "https://mdv1.vercel.app/",
   "sameAs": [
     "https://github.com/musadivarci",
-    "https://medium.com/@musadivarci19"
+    "https://medium.com/@musadivarci19",
+    "https://www.linkedin.com/in/musa-divarci-9280515a"
   ],
   "jobTitle": [
+    "Yazılım Uzmanı",
     "Software Developer",
+    "Senior Software Engineer",
+    ".NET / C# Specialist",
+    "Bilişim Teknolojileri Uzmanı",
     "Information Technologies Specialist",
+    "Teknoloji Lideri",
     "CTO",
+    "BT Koordinatörü",
     "IT Coordinator",
+    "Proje Koordinatörü",
     "Project Coordinator"
   ],
   "knowsAbout": [
+    "Yazılım Geliştirme",
     "Software Development",
     "Web Application Development",
     "ASP",
     ".NET",
     "C#",
+    "ASP.NET Core",
+    "Backend Architecture",
+    "Clean Architecture",
+    "SQL",
+    "Veritabanı Mimarisi",
     "JavaScript",
     "TypeScript",
     "React",
     "Python",
-    "SQL",
+    "Otomasyon",
+    "Bilişim Teknolojileri",
     "Information Technologies",
+    "Sistem Mühendisliği",
     "System Engineering",
+    "Ağ Mimarisi",
     "Network Architecture",
     "Cisco Networking",
     "Microsoft Technologies",
     "Enterprise IT",
+    "Teknoloji Stratejisi",
     "Technology Strategy",
+    "Teknik Liderlik",
     "Technical Leadership",
+    "Kamusal Bilişim",
     "Public-sector IT",
+    "BT Koordinasyonu",
     "IT Coordination",
+    "Proje Koordinasyonu",
     "Project Coordination"
   ],
-  "description": "Technology professional with professional software development experience since 2001, spanning software development, information technologies, systems and networks, CTO-level technology leadership, public-sector IT coordination within Türkiye's Ministry of National Education, and project coordination."
+  "description": "Musa DİVARCI; 2001'den bu yana .NET, C#, ASP, backend mimarisi, SQL ve web teknolojileri alanında çalışan, bilişim teknolojileri, sistem ve ağ altyapıları, teknoloji yönetimi ve proje koordinasyonunda 20 yılı aşkın deneyime sahip Kıdemli Yazılım Uzmanı ve Bilişim Profesyonelidir."
 }

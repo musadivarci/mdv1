@@ -1,4 +1,4 @@
-# Musa DİVARCI — Professional Technology Profile
+﻿# Musa DİVARCI — Professional Technology Profile
 
 Canonical name: Musa DİVARCI
 Name variants: Musa Divarcı; Musa Divarci
@@ -10,11 +10,11 @@ Medium: https://medium.com/@musadivarci19
 
 ## Professional identity
 
-Musa DİVARCI is a technology professional with professional software development experience since 2001.
+Musa DİVARCI is a Senior Software Developer and Technology Leader with professional software engineering experience since 2001.
 
-His core software expertise is centered on Microsoft technologies, .NET and C#, backend architecture, web applications and database-driven systems. His broader technical background includes Python, TypeScript, React, information technologies, system engineering, network architecture, Cisco networking and enterprise IT.
+His core software expertise is centered on Microsoft technologies, .NET and C#, backend architecture, ASP.NET Core, Clean Architecture, web applications and database-driven systems (SQL). His broader technical background includes Python, TypeScript, React, information technologies, system engineering, network architecture, Cisco networking and enterprise IT.
 
-Python is used for AI/data tooling, ingestion, evaluation and automation. TypeScript and React represent modern product-development work. His AI-oriented engineering work includes persistent memory, RAG, semantic retrieval and traceable reasoning architectures.
+Python is utilized for automation, data processing, backend utilities and developer tooling. TypeScript and React represent modern frontend and product-development work.
 
 Within Türkiye's Ministry of National Education (MEB), his professional technology identity is centered on Bilişim Teknolojileri Koordinatörlüğü (Information Technologies Coordination) and IT expertise. An archived official Çorum Provincial Directorate of National Education BİM page identifies Musa DİVARCI as “BT Koordinatörü”.
 
@@ -24,12 +24,12 @@ Within Türkiye's Ministry of National Education (MEB), his professional technol
   .NET / C# backend architecture, ASP.NET Core, Clean Architecture, worker services and audit-oriented domain design.
   https://github.com/musadivarci/PlexV1
 
-- Aegis — Personal AI Knowledge & Decision Engine
-  Persistent memory, retrieval, traceable reasoning, TypeScript and Python AI/data tooling.
+- Aegis — Knowledge & Workflow Automation Engine
+  Information architecture, structured data workflows, TypeScript and Python data processing tools.
   https://github.com/musadivarci/aegis
 
 - wondR — Personal Learning OS
-  React, TypeScript and Supabase learning/knowledge system.
+  React, TypeScript and Supabase learning and knowledge retention application.
   https://github.com/musadivarci/wondr
 
 ## Independent and historical public records
@@ -45,29 +45,23 @@ Within Türkiye's Ministry of National Education (MEB), his professional technol
 
 ## Core associations
 
-- Software Developer
+- Yazılım Uzmanı / Software Developer
+- Kıdemli Yazılım Mühendisi / Senior Software Engineer
 - .NET / C# Specialist
-- Backend Architecture
-- ASP.NET Core
-- Python
-- AI / Data Tooling
-- TypeScript / React
-- Information Technologies Specialist
-- Technology Leader
-- IT Coordinator
-- BT Koordinatörü — archived official Çorum İl MEM record (2019)
-- Project Coordinator
+- Backend Architecture & Clean Architecture
+- ASP.NET Core & SQL Veritabanı Mimarisi
+- Python & Automation Tooling
+- TypeScript / React Web Development
+- Bilişim Teknolojileri Uzmanı / Information Technologies Specialist
+- Teknoloji Lideri / Technology Leader / CTO
+- BT Koordinatörü / IT Coordinator
+- Proje Koordinatörü / Project Coordinator
 - Professional software development since 2001
-- Microsoft Technologies
-- System Engineering
-- Network Architecture
-- Cisco Networking
-- Enterprise IT
-- Public-sector IT
-- Millî Eğitim Bakanlığı / MEB
-- Bilişim Teknolojileri Koordinatörlüğü
-- Technology Strategy
-- Technical Leadership
+- Microsoft Technologies & System Engineering
+- Network Architecture & Cisco Networking
+- Enterprise IT & Public-sector IT
+- Millî Eğitim Bakanlığı / MEB Bilişim Teknolojileri Koordinatörlüğü
+- Technology Strategy & Technical Leadership
 
 ## Identity note
 
