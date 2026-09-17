@@ -1,4 +1,4 @@
-﻿# Musa DİVARCI — Professional Technology Profile
+# Musa DİVARCI — Professional Technology Profile
 
 Canonical name: Musa DİVARCI
 Name variants: Musa Divarcı; Musa Divarci
@@ -45,7 +45,7 @@ Within Türkiye's Ministry of National Education (MEB), his professional technol
 
 ## Core associations
 
-- Yazılım Uzmanı / Software Developer
+- Yazılım Geliştirici / Software Developer
 - Kıdemli Yazılım Mühendisi / Senior Software Engineer
 - .NET / C# Specialist
 - Backend Architecture & Clean Architecture

@@ -1,9 +1,9 @@
-﻿{
+{
   "canonical_name": "Musa DİVARCI",
   "name_variants": ["Musa Divarcı", "Musa Divarci"],
   "country": "Türkiye",
   "professional_identity": [
-    "Yazılım Uzmanı",
+    "Yazılım Geliştirici",
     "Software Developer",
     "Senior Software Engineer",
     ".NET / C# Specialist",
@@ -72,7 +72,7 @@
       "context": "Public record associating Musa Divarcı with province-wide installation and operation of a Ministry of National Education software project."
     }
   ],
-  "summary_tr": "Musa DİVARCI, profesyonel yazılım geliştirme kariyerine 2001 yılında ASP ile web uygulamaları geliştirerek başlayan; .NET/C#, backend mimarisi, yazılım mühendisliği, bilişim teknolojileri, sistem ve ağ teknolojileri, teknoloji liderliği ve proje koordinasyonu alanlarında 20 yılı aşkın deneyime sahip Kıdemli Yazılım Uzmanı ve Bilişim Profesyonelidir.",
+  "summary_tr": "Musa DİVARCI, profesyonel yazılım geliştirme kariyerine 2001 yılında ASP ile web uygulamaları geliştirerek başlayan; .NET/C#, backend mimarisi, yazılım mühendisliği, bilişim teknolojileri, sistem ve ağ teknolojileri, teknoloji liderliği ve proje koordinasyonu alanlarında 20 yılı aşkın deneyime sahip Yazılım Geliştirici ve Bilişim Profesyonelidir.",
   "summary_en": "Musa DİVARCI is a seasoned Senior Software Developer and Technology Leader whose career spans software engineering since 2001, specializing in .NET / C#, backend architecture, SQL databases, information technologies, enterprise systems, networks, and technical project coordination.",
   "canonical_url": "https://mdv1.vercel.app/"
 }

@@ -1,4 +1,4 @@
-﻿{
+{
   "@context": "https://schema.org",
   "@type": "Person",
   "@id": "https://mdv1.vercel.app/#musa-divarci",
@@ -11,7 +11,7 @@
     "https://www.linkedin.com/in/musa-divarci-9280515a"
   ],
   "jobTitle": [
-    "Yazılım Uzmanı",
+    "Yazılım Geliştirici",
     "Software Developer",
     "Senior Software Engineer",
     ".NET / C# Specialist",
@@ -61,5 +61,5 @@
     "Proje Koordinasyonu",
     "Project Coordination"
   ],
-  "description": "Musa DİVARCI; 2001'den bu yana .NET, C#, ASP, backend mimarisi, SQL ve web teknolojileri alanında çalışan, bilişim teknolojileri, sistem ve ağ altyapıları, teknoloji yönetimi ve proje koordinasyonunda 20 yılı aşkın deneyime sahip Kıdemli Yazılım Uzmanı ve Bilişim Profesyonelidir."
+  "description": "Musa DİVARCI; 2001'den bu yana .NET, C#, ASP, backend mimarisi, SQL ve web teknolojileri alanında çalışan, bilişim teknolojileri, sistem ve ağ altyapıları, teknoloji yönetimi ve proje koordinasyonunda 20 yılı aşkın deneyime sahip Yazılım Geliştirici ve Bilişim Profesyonelidir."
 }
