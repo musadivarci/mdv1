@@ -5,6 +5,7 @@
 [![Website](https://img.shields.io/badge/Website-musadivarci.com.tr-0078D4?style=flat&logo=google-chrome&logoColor=white)](https://www.musadivarci.com.tr/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Musa_Divarc%C4%B1-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/musa-divarci-9280515a)
 [![Medium](https://img.shields.io/badge/Medium-@musadivarci19-black?style=flat&logo=medium&logoColor=white)](https://medium.com/@musadivarci19)
+[![Gravatar](https://img.shields.io/badge/Gravatar-Musa_Divarc%C4%B1-1e8cbe?style=flat&logo=gravatar&logoColor=white)](https://gravatar.com/joyous9a1856f49c)
 
 ---
 
