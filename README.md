@@ -1,4 +1,4 @@
-﻿# Musa Divarcı — Professional Technology Profile
+# Musa Divarcı — Professional Technology Profile
 
 Public professional identity site for **Musa Divarcı** (Musa DİVARCI).
 
@@ -23,4 +23,4 @@ The repository includes:
 
 ## Deployment
 
-Static HTML site deployed on Vercel: [https://mdv1.vercel.app](https://mdv1.vercel.app)
+Production URL: [https://www.musadivarci.com.tr](https://www.musadivarci.com.tr)

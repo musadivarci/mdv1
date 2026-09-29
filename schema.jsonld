@@ -1,10 +1,10 @@
 {
   "@context": "https://schema.org",
   "@type": "Person",
-  "@id": "https://mdv1.vercel.app/#musa-divarci",
+  "@id": "https://www.musadivarci.com.tr/#musa-divarci",
   "name": "Musa DİVARCI",
   "alternateName": ["Musa Divarcı", "Musa Divarci"],
-  "url": "https://mdv1.vercel.app/",
+  "url": "https://www.musadivarci.com.tr/",
   "sameAs": [
     "https://github.com/musadivarci",
     "https://medium.com/@musadivarci19",
