@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "mdv1.vercel.app"
+        }
+      ],
+      "destination": "https://www.musadivarci.com.tr/:path*",
+      "permanent": true
+    }
+  ]
+}
