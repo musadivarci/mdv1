@@ -30,5 +30,5 @@ I am a seasoned **Software Developer and Technology Professional** with hands-on
 
 ## 📌 Canonical Profiles & Verification
 
-- **Personal Technology Profile:** [https://www.musadivarci.com.tr/professional-profile.html](https://www.musadivarci.com.tr/professional-profile.html)
+- **Personal Technology Profile:** [https://www.musadivarci.com.tr/professional-profile](https://www.musadivarci.com.tr/professional-profile)
 - **Entity Identification:** Musa DİVARCI (Musa Divarcı, Musa Divarci)
