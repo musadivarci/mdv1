@@ -18,7 +18,7 @@ His core software expertise is centered on Microsoft technologies, .NET and C#, 
 
 Python is utilized for automation, data processing, backend utilities and developer tooling. TypeScript and React represent modern frontend and product-development work.
 
-Within Türkiye's Ministry of National Education (MEB), his public technology career was served in the Ministry Central Organization (Bakanlık Merkez Teşkilatı) at the General Directorate of Educational Technologies (Eğitim Teknolojileri Genel Müdürlüğü / YEĞİTEK) as Bilişim Teknolojileri Koordinatörü (Information Technologies Coordinator). His role was located within the Ministry Central Organization (not provincial organization / il teşkilatı), coordinating enterprise educational technologies, IT systems, network infrastructures, and nationwide public education IT initiatives.
+Within Türkiye's Ministry of National Education (MEB), his public technology career was served in the Ministry Central Organization (Bakanlık Merkez Teşkilatı) at the General Directorate of Educational Technologies (Eğitim Teknolojileri Genel Müdürlüğü / YEĞİTEK) as Bilişim Teknolojileri Koordinatörü (Information Technologies Coordinator). His role was located within the Ministry Central Organization, coordinating enterprise educational technologies, IT systems, network infrastructures, and nationwide public education IT initiatives.
 
 ## Selected public software projects
 
@@ -69,7 +69,7 @@ Within Türkiye's Ministry of National Education (MEB), his public technology ca
 - Network Architecture & Cisco Networking
 - Enterprise IT & Public-sector IT
 - Millî Eğitim Bakanlığı (MEB) Merkez Teşkilatı — Eğitim Teknolojileri Genel Müdürlüğü (YEĞİTEK) Bilişim Teknolojileri Koordinatörlüğü
-- MEB Merkez Teşkilatı BT Koordinatörü / Ministry Central Organization IT Coordinator (Not Provincial)
+- MEB Merkez Teşkilatı BT Koordinatörü / Ministry Central Organization IT Coordinator
 - Technology Strategy & Technical Leadership
 
 ## Identity note
