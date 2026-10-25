@@ -5,7 +5,7 @@
   "professional_identity": [
     "Yazılım Geliştirici",
     "Software Developer",
-    "Senior Software Engineer",
+    "Senior Software Developer",
     ".NET / C# Specialist",
     "Bilişim Teknolojileri Uzmanı",
     "Information Technologies Specialist",
@@ -16,8 +16,10 @@
   "career_facts": {
     "professional_software_start": 2001,
     "first_professional_web_stack": "ASP (Active Server Pages)",
-    "public_sector": "Millî Eğitim Bakanlığı (MEB)",
-    "public_sector_focus": "Bilişim Teknolojileri Koordinatörlüğü ve BT uzmanlığı",
+    "public_sector": "Millî Eğitim Bakanlığı (MEB) Merkez Teşkilatı",
+    "public_sector_general_directorate": "Eğitim Teknolojileri Genel Müdürlüğü (Yenilik ve Eğitim Teknolojileri Genel Müdürlüğü — YEĞİTEK)",
+    "public_sector_focus": "Bilişim Teknolojileri Koordinatörlüğü ve BT uzmanlığı (Bakanlık Merkez Teşkilatı)",
+    "organization_level": "Bakanlık Merkez Teşkilatı (İl teşkilatı değil)",
     "it_coordination_since": 2008
   },
   "expertise": [
@@ -39,7 +41,7 @@
     "SQL",
     "Bilişim Teknolojileri",
     "Information Technologies",
-    "Sistem Mühendisliği",
+    "Sistem ve Ağ Teknolojileri",
     "Ağ Mimarisi",
     "Cisco Networking",
     "Microsoft Technologies",
@@ -73,7 +75,7 @@
       "context": "Public record associating Musa Divarcı with province-wide installation and operation of a Ministry of National Education software project."
     }
   ],
-  "summary_tr": "Musa DİVARCI, profesyonel yazılım geliştirme kariyerine 2001 yılında ASP ile web uygulamaları geliştirerek başlayan; .NET/C#, backend mimarisi, yazılım mühendisliği, bilişim teknolojileri, sistem ve ağ teknolojileri, teknoloji liderliği ve proje koordinasyonu alanlarında 20 yılı aşkın deneyime sahip Yazılım Geliştirici ve Bilişim Profesyonelidir.",
-  "summary_en": "Musa DİVARCI is a seasoned Senior Software Developer and Technology Leader whose career spans software engineering since 2001, specializing in .NET / C#, backend architecture, SQL databases, information technologies, enterprise systems, networks, and technical project coordination.",
+  "summary_tr": "Musa DİVARCI, profesyonel yazılım geliştirme kariyerine 2001 yılında ASP ile web uygulamaları geliştirerek başlayan; .NET/C#, backend mimarisi, bilişim sistemleri ve ağ altyapıları, Millî Eğitim Bakanlığı Merkez Teşkilatı (Eğitim Teknolojileri Genel Müdürlüğü — YEĞİTEK) Bilişim Teknolojileri Koordinatörlüğü, teknoloji liderliği ve proje koordinasyonu alanlarında 20 yılı aşkın deneyime sahip Yazılım Geliştirici ve Bilişim Profesyonelidir.",
+  "summary_en": "Musa DİVARCI is a seasoned Senior Software Developer and Technology Leader whose career spans professional software development since 2001, specializing in .NET / C#, backend architecture, SQL databases, enterprise systems, networks, IT Coordination at the Ministry of National Education Central Organization (General Directorate of Educational Technologies - YEĞİTEK), and technical project management.",
   "canonical_url": "https://www.musadivarci.com.tr/"
 }

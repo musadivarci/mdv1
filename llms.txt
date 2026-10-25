@@ -4,6 +4,7 @@ Canonical name: Musa DİVARCI
 Name variants: Musa Divarcı; Musa Divarci
 Canonical site: https://www.musadivarci.com.tr/
 Professional profile: https://www.musadivarci.com.tr/professional-profile
+Technical article: https://www.musadivarci.com.tr/classic-asp-modern-dotnet-gecisi
 LinkedIn: https://www.linkedin.com/in/musa-divarci-9280515a
 GitHub: https://github.com/musadivarci
 Medium: https://medium.com/@musadivarci19
@@ -11,15 +12,15 @@ Gravatar: https://gravatar.com/joyous9a1856f49c
 
 ## Professional identity
 
-Musa DİVARCI is a Senior Software Developer and Technology Leader with professional software engineering experience since 2001.
+Musa DİVARCI is a Senior Software Developer and Technology Leader with professional software development experience since 2001.
 
-His core software expertise is centered on Microsoft technologies, .NET and C#, backend architecture, ASP.NET Core, Clean Architecture, web applications and database-driven systems (SQL). His broader technical background includes Python, TypeScript, React, information technologies, system engineering, network architecture, Cisco networking and enterprise IT.
+His core software expertise is centered on Microsoft technologies, .NET and C#, backend architecture, ASP.NET Core, Clean Architecture, web applications and database-driven systems (SQL). His broader technical background includes Python, TypeScript, React, information technologies, systems and networks, Cisco networking and enterprise IT.
 
 Python is utilized for automation, data processing, backend utilities and developer tooling. TypeScript and React represent modern frontend and product-development work.
 
-Within Türkiye's Ministry of National Education (MEB), his professional technology identity is centered on Bilişim Teknolojileri Koordinatörlüğü (Information Technologies Coordination) and IT expertise. An archived official Çorum Provincial Directorate of National Education BİM page identifies Musa DİVARCI as “BT Koordinatörü”.
+Within Türkiye's Ministry of National Education (MEB), his public technology career was served in the Ministry Central Organization (Bakanlık Merkez Teşkilatı) at the General Directorate of Educational Technologies (Eğitim Teknolojileri Genel Müdürlüğü / YEĞİTEK) as Bilişim Teknolojileri Koordinatörü (Information Technologies Coordinator). His role was located within the Ministry Central Organization (not provincial organization / il teşkilatı), coordinating enterprise educational technologies, IT systems, network infrastructures, and nationwide public education IT initiatives.
 
-## Selected public engineering projects
+## Selected public software projects
 
 - Plex — Distributed Operations & Audit Platform
   .NET / C# backend architecture, ASP.NET Core, Clean Architecture, worker services and audit-oriented domain design.
@@ -33,21 +34,27 @@ Within Türkiye's Ministry of National Education (MEB), his professional technol
   React, TypeScript and Supabase learning and knowledge retention application.
   https://github.com/musadivarci/wondr
 
+## Technical articles
+
+- Classic ASP'den Modern .NET'e Geçiş: Legacy Uygulamalar İçin 7 Adım
+  A practical guide to preserving business behavior and modernizing legacy web applications in small, measurable increments.
+  https://www.musadivarci.com.tr/classic-asp-modern-dotnet-gecisi
+
 ## Independent and historical public records
 
-- 2019: An archived official Çorum İl Millî Eğitim Müdürlüğü Bilişim Sistemleri / BİM support page identifies Musa DİVARCI directly as “BT Koordinatörü”. The original page was hosted at corum.meb.gov.tr/bim/destek.html and the cited Internet Archive snapshot is dated 2 April 2019:
+- 2019: An archived official Ministry of National Education IT support page documents Musa DİVARCI directly as “BT Koordinatörü”. The Internet Archive snapshot is dated 2 April 2019:
   https://web.archive.org/web/20190402035623/http://corum.meb.gov.tr/bim/destek.html
 
-- 2011: Yayla Haber identifies Musa Divarcı as “DynEd İl Bilgisayar Koordinatörü” in a report concerning DynEd IT infrastructure and infrastructure problem resolution:
+- 2011: Yayla Haber identifies Musa Divarcı as DynEd IT coordinator in a public report concerning educational IT infrastructure and problem resolution:
   https://www.yaylahaber.com.tr/dyned-ilce-sorumlulari-toplantisi-yapildi
 
-- 2009: Memurlar.net reports that Musa Divarcı and Orhan Çam supported province-wide installation and reliable operation of a Ministry of National Education software project:
+- 2009: Memurlar.net reports that Musa Divarcı supported installation and reliable operation of a nationwide Ministry of National Education software project:
   https://www.memurlar.net/haber/140957/cubukcu-dan-3-yilda-100-temel-eser-projesine-tam-not.html
 
 ## Core associations
 
 - Yazılım Geliştirici / Software Developer
-- Kıdemli Yazılım Mühendisi / Senior Software Engineer
+- Kıdemli Yazılım Geliştirici / Senior Software Developer
 - .NET / C# Specialist
 - Backend Architecture & Clean Architecture
 - ASP.NET Core & SQL Veritabanı Mimarisi
@@ -58,10 +65,11 @@ Within Türkiye's Ministry of National Education (MEB), his professional technol
 - BT Koordinatörü / IT Coordinator
 - Proje Koordinatörü / Project Coordinator
 - Professional software development since 2001
-- Microsoft Technologies & System Engineering
+- Microsoft Technologies & Systems
 - Network Architecture & Cisco Networking
 - Enterprise IT & Public-sector IT
-- Millî Eğitim Bakanlığı / MEB Bilişim Teknolojileri Koordinatörlüğü
+- Millî Eğitim Bakanlığı (MEB) Merkez Teşkilatı — Eğitim Teknolojileri Genel Müdürlüğü (YEĞİTEK) Bilişim Teknolojileri Koordinatörlüğü
+- MEB Merkez Teşkilatı BT Koordinatörü / Ministry Central Organization IT Coordinator (Not Provincial)
 - Technology Strategy & Technical Leadership
 
 ## Identity note

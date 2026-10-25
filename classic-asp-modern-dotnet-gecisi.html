@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Classic ASP'den Modern .NET'e Geçiş: Legacy Uygulamalar İçin 7 Adım | Musa DİVARCI</title>
+  <meta name="description" content="Classic ASP ve eski web uygulamalarını modern .NET'e taşırken iş kurallarını korumak, riski azaltmak ve geçişi küçük dilimlere bölmek için uygulanabilir bir rehber.">
+  <meta name="author" content="Musa DİVARCI">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+  <link rel="canonical" href="https://www.musadivarci.com.tr/classic-asp-modern-dotnet-gecisi">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Musa DİVARCI">
+  <meta property="og:title" content="Classic ASP'den Modern .NET'e Geçiş: Legacy Uygulamalar İçin 7 Adım">
+  <meta property="og:description" content="Eski web uygulamalarını modern .NET'e taşırken riski azaltan, küçük adımlı bir yaklaşım.">
+  <meta property="og:url" content="https://www.musadivarci.com.tr/classic-asp-modern-dotnet-gecisi">
+  <meta property="og:locale" content="tr_TR">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Classic ASP'den Modern .NET'e Geçiş: 7 Adım">
+  <meta name="twitter:description" content="Legacy web uygulamalarını modern .NET'e taşımak için pratik bir geçiş rehberi.">
+  <style>
+    body { max-width: 820px; margin: 56px auto; padding: 0 24px; font: 17px/1.75 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #17202a; }
+    h1, h2, h3 { line-height: 1.25; color: #0b1a2b; }
+    h1 { font-size: clamp(34px, 7vw, 52px); letter-spacing: -.035em; }
+    h2 { margin-top: 42px; font-size: 27px; }
+    a { color: #174ea6; }
+    .eyebrow, .byline, .back { color: #64748b; }
+    .eyebrow { font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .byline { border-bottom: 1px solid #e2e8f0; padding-bottom: 22px; }
+    li { margin: 12px 0; }
+    .callout { padding: 16px 20px; border-left: 4px solid #4b86d8; background: #f1f6fb; }
+    footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid #e2e8f0; font-size: 14px; }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": "https://www.musadivarci.com.tr/classic-asp-modern-dotnet-gecisi#article",
+    "headline": "Classic ASP'den Modern .NET'e Geçiş: Legacy Uygulamalar İçin 7 Adım",
+    "description": "Classic ASP ve eski web uygulamalarını modern .NET'e taşırken iş kurallarını korumak, riski azaltmak ve geçişi küçük dilimlere bölmek için uygulanabilir bir rehber.",
+    "inLanguage": "tr-TR",
+    "datePublished": "2026-10-14",
+    "dateModified": "2026-10-14",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.musadivarci.com.tr/classic-asp-modern-dotnet-gecisi"
+    },
+    "author": {
+      "@type": "Person",
+      "@id": "https://www.musadivarci.com.tr/#musa-divarci",
+      "name": "Musa DİVARCI",
+      "url": "https://www.musadivarci.com.tr/",
+      "sameAs": [
+        "https://www.linkedin.com/in/musa-divarci-9280515a",
+        "https://github.com/musadivarci"
+      ]
+    },
+    "publisher": {
+      "@type": "Person",
+      "@id": "https://www.musadivarci.com.tr/#musa-divarci",
+      "name": "Musa DİVARCI"
+    },
+    "keywords": [
+      "Classic ASP",
+      "ASP.NET Core",
+      ".NET",
+      "C#",
+      "legacy modernization",
+      "uygulama modernizasyonu"
+    ],
+    "citation": [
+      "https://learn.microsoft.com/en-us/aspnet/core/fundamentals/?view=aspnetcore-10.0",
+      "https://learn.microsoft.com/en-us/azure/architecture/patterns/strangler-fig"
+    ]
+  }
+  </script>
+</head>
+<body>
+<main>
+  <p class="back"><a href="/">← musadivarci.com.tr Ana Sayfa</a></p>
+  <p class="eyebrow">Yazılım Mimarisi · .NET · Uygulama Modernizasyonu</p>
+  <h1>Classic ASP'den Modern .NET'e Geçiş: Legacy Uygulamalar İçin 7 Adım</h1>
+  <p class="byline">Musa DİVARCI · Yazılım Geliştirici, .NET / C# · 14 Ekim 2026</p>
+
+  <p>Profesyonel yazılım geliştirme kariyerim 2001'de ASP ile sunucu taraflı web uygulamaları geliştirerek başladı. O yıllardan bugüne platformlar değişti; fakat eski bir uygulamayı yenilerken asıl zor sorunun çoğu zaman kodu başka bir dile taşımak değil, sistemin görünmeyen davranışlarını ve iş kurallarını kaybetmeden ilerlemek olduğunu gördüm.</p>
+  <p>Classic ASP, ASP.NET ve ASP.NET Core aynı teknolojinin farklı sürümleri değildir. Bu nedenle geçişi otomatik bir “framework yükseltmesi” gibi değil, mevcut davranışları anlayıp hedef mimaride yeniden kurduğunuz kontrollü bir modernizasyon çalışması olarak ele alın.</p>
+
+  <h2>1. Önce uygulamanın gerçekte ne yaptığını çıkarın</h2>
+  <p>Dosya listesinden başlamayın; kullanıcıların ve diğer sistemlerin kullandığı iş akışlarını haritalayın. Kritik URL'ler, formlar, zamanlanmış işler, e-posta çıktıları, dış servisler, COM bileşenleri, dosya paylaşımları, oturum kullanımı ve veritabanı nesneleri tek tek kaydedilmelidir. Uzun süredir kimsenin dokunmadığı bir sayfa bile başka bir sistem tarafından çağrılıyor olabilir.</p>
+  <p>Her akış için sahibi, kullanım sıklığını, iş etkisini ve bağımlılıklarını yazın. Bu envanter hem ilk taşınacak parçayı seçmenizi hem de geçiş kapsamının büyümesini önlemenizi sağlar.</p>
+
+  <h2>2. Mevcut davranış için bir güvenlik ağı kurun</h2>
+  <p>Legacy sistemler çoğu zaman eksik belgelenmiştir; çalışan davranış, fiilî spesifikasyon haline gelmiştir. En kritik senaryolar için girdiyi, çıktıyı ve yan etkileri kaydedin. Mümkün olan yerlerde karakterizasyon testleri ve üretim metrikleri ekleyin: hata oranı, yanıt süresi, işlem hacmi ve önemli iş sonuçları.</p>
+  <p>Test edilemeyen her kritik akış, geçiş sırasında doğrulanması daha pahalı bir risktir. Önce bu boşlukları görünür kılın; sonra modernizasyona başlayın.</p>
+
+  <h2>3. Hedefi teknoloji modasına göre değil, ihtiyaca göre seçin</h2>
+  <p>ASP.NET Core; bağımlılık enjeksiyonu, yapılandırma ve middleware gibi açık uygulama altyapıları sunar. Hedef mimariyi seçerken mevcut ekip becerilerini, operasyon ortamını, güvenlik gereksinimlerini ve sistemin beklenen ömrünü birlikte değerlendirin. Her eski uygulamayı mikroservislere bölmek gerekmez; iyi sınırları olan tek bir uygulama, erken dağıtık sistem karmaşıklığından daha doğru bir başlangıç olabilir.</p>
+  <p>Hedefi somutlaştırın: hangi sorumluluklar uygulamada kalacak, hangi entegrasyonlar sınırın dışında olacak ve bir iş akışının tamamlandığı nasıl anlaşılacak?</p>
+
+  <h2>4. Dosya dosya değil, uçtan uca iş dilimleri halinde ilerleyin</h2>
+  <p>Bir web sayfasını yeni bir controller'a taşımak tek başına modernizasyon değildir. Girdi doğrulamasını, iş kuralını, kalıcı veri değişikliğini, yetkilendirmeyi ve kullanıcıya dönen sonucu birlikte ele alan küçük bir iş dilimi seçin. Böylece yeni parçanın gerçek bir kullanıcı ihtiyacını uçtan uca karşıladığını gösterebilirsiniz.</p>
+  <p>İlk dilim için düşük bağımlılıklı ama anlamlı bir iş akışı seçmek genellikle iyi bir dengedir: ekip teslimat biçimini öğrenir, siz de mimari varsayımları üretim riski büyümeden sınarsınız.</p>
+
+  <h2>5. Veri, oturum ve kimlik doğrulamayı ayrı riskler olarak değerlendirin</h2>
+  <p>Uygulama kodundan bağımsız olarak şema, veri kalitesi, tarih ve sayı biçimleri, karakter kodlaması, parola saklama, yetki kontrolleri, oturum davranışı ve işlem sınırları incelenmelidir. Yeni uygulamanın eski sistemle aynı veriye eriştiği dönemlerde eşzamanlı yazma ve tutarsızlık senaryoları tasarlanmalıdır. Geri dönüş planı, yalnızca uygulama dağıtımını değil veri değişikliklerinin geri alınabilirliğini de kapsamalıdır.</p>
+
+  <h2>6. Kullanıcı trafiğini kademeli yönlendirin ve ölçün</h2>
+  <p>Yeni ve eski uygulamayı bir süre birlikte çalıştırmak mümkünse geçişi tek seferlik büyük bir kesintiye dönüştürmeyin. İşlevleri parça parça yeni sisteme yönlendirin; hata, yanıt süresi ve iş sonuçlarını iki tarafta karşılaştırın. Microsoft'un Strangler Fig yaklaşımı da eski sistemin işlevlerini zaman içinde yeni uygulamalarla değiştirmeyi tarif eder.</p>
+  <p>Her dilim için bir geri alma koşulu belirleyin. Loglar ve ölçümler olmadan “sorunsuz görünüyor” bir doğrulama yöntemi değildir; üretim trafiği için açık kabul ölçütleri kullanın.</p>
+
+  <h2>7. Eski sistemi gerçekten kapatın</h2>
+  <p>Yeni ekranın yayına alınması projenin sonu değildir. Eski URL'leri çağıran istemciler, zamanlanmış görevler, raporlar, entegrasyonlar ve erişim izinleri hâlâ çalışıyor olabilir. Kullanımın bittiğini ölçün, sahipleriyle teyit edin, veri saklama yükümlülüklerini kontrol edin ve eski bileşeni planlı biçimde devreden çıkarın. Aksi halde kurum iki sistemi de süresiz olarak taşımaya devam eder.</p>
+
+  <h2>Başlangıç için kısa kontrol listesi</h2>
+  <ul>
+    <li>Kritik iş akışları ve bağımlılıklar yazılı mı?</li>
+    <li>Mevcut sistemin önemli davranışları test veya ölçümle korunuyor mu?</li>
+    <li>İlk iş dilimi küçük, kullanıcıya anlamlı ve geri alınabilir mi?</li>
+    <li>Kimlik, veri ve entegrasyon riskleri uygulama kodundan ayrı ele alındı mı?</li>
+    <li>Yeni ve eski sistemin birlikte çalışacağı dönem için ölçüm ve kapatma planı var mı?</li>
+  </ul>
+
+  <p class="callout"><strong>Özet:</strong> Classic ASP'den modern .NET'e geçişin güvenilir yolu, eski kodu topluca yeniden yazmak değil; mevcut davranışı kanıtlarla anlamak, işlevleri küçük dilimlerle taşımak ve her adımı ölçerek ilerlemektir.</p>
+
+  <h2>Kaynaklar ve devamı</h2>
+  <ul>
+    <li><a href="https://learn.microsoft.com/en-us/aspnet/core/fundamentals/?view=aspnetcore-10.0" rel="external">Microsoft Learn: ASP.NET Core temel kavramları</a></li>
+    <li><a href="https://learn.microsoft.com/en-us/azure/architecture/patterns/strangler-fig" rel="external">Microsoft Azure Architecture Center: Strangler Fig Pattern</a></li>
+    <li><a href="/professional-profile">Musa DİVARCI — .NET/C# profesyonel profili</a></li>
+    <li><a href="https://github.com/musadivarci/PlexV1" rel="external">Plex — açık kaynak .NET/C# referans projesi</a></li>
+  </ul>
+</main>
+<footer>
+  <a href="/">Musa DİVARCI</a> · Yazılım Geliştirici · .NET / C# · Türkiye
+</footer>
+</body>
+</html>

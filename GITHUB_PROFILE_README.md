@@ -11,16 +11,16 @@
 
 ## 👨‍💻 About Me
 
-I am a seasoned **Software Developer and Technology Professional** with hands-on software engineering and systems experience since **2001**. 
+I am a seasoned **Software Developer and Technology Professional** with hands-on software development and systems experience since **2001**.
 
 - 🚀 **Core Expertise:** .NET, C#, ASP.NET Core, Clean Architecture, SQL, Enterprise Backend Systems
 - 🛠️ **Additional Tooling & Ecosystem:** Python, TypeScript, React, Modern Web Development, Automation
-- 🌐 **Systems & Infrastructure:** System Engineering, Network Architecture (Cisco CCNP curriculum), Enterprise IT
-- 🏛️ **Public Sector & Leadership:** Ministry of National Education (MEB) IT Coordination, CTO-level Technology Leadership, Technical Project Management
+- 🌐 **Systems & Infrastructure:** Systems, Network Architecture (Cisco CCNP curriculum), Enterprise IT
+- 🏛️ **Public Sector & Leadership:** Ministry of National Education (MEB) Central Organization — General Directorate of Educational Technologies (YEĞİTEK) IT Coordination, CTO-level Technology Leadership, Technical Project Management
 
 ---
 
-## 🏗️ Selected Engineering Repositories
+## 🏗️ Selected Software Repositories
 
 - **[Plex](https://github.com/musadivarci/PlexV1)** — Distributed Operations & Audit Platform (.NET / C#, ASP.NET Core, Clean Architecture)
 - **[Aegis](https://github.com/musadivarci/aegis)** — Structured Knowledge & Workflow Automation Engine (TypeScript & Python)
