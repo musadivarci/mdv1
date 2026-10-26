@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Musa DİVARCI | Portre Tasarım Demo Seçenekleri</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&display=swap');
+    :root {
+      --bg: #07101a;
+      --ink: #f2f5f8;
+      --muted: #8d9bad;
+      --line: rgba(167,191,218,.18);
+      --blue: #4b86d8;
+      --blue2: #83a9d8;
+      --ice: #dce8f5;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; max-width: 100%; overflow-x: hidden; }
+    body {
+      margin: 0;
+      max-width: 100%;
+      background: radial-gradient(circle at 62% 18%, rgba(75,134,216,.08), transparent 30%), linear-gradient(135deg, #050a11 0%, #07101a 48%, #0b1a2b 100%);
+      color: var(--ink);
+      font-family: 'DM Sans', Arial, sans-serif;
+      overflow-x: hidden;
+      padding-top: 60px; /* Space for demo bar */
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1320px, calc(100% - 72px)); margin: auto; }
+    
+    /* Demo Switcher Bar */
+    .demo-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      background: rgba(11, 20, 32, 0.94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(75,134,216,.3);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 28px;
+      z-index: 1000;
+    }
+    .demo-title {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .05em;
+      color: var(--ice);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .demo-badge {
+      background: rgba(75,134,216,.2);
+      color: var(--blue2);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .demo-buttons {
+      display: flex;
+      gap: 10px;
+    }
+    .demo-btn {
+      background: rgba(255,255,255,.05);
+      border: 1px solid var(--line);
+      color: var(--muted);
+      padding: 7px 14px;
+      border-radius: 6px;
+      font-size: 12px;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all .2s ease;
+    }
+    .demo-btn:hover {
+      color: var(--ink);
+      border-color: var(--blue2);
+    }
+    .demo-btn.active {
+      background: var(--blue);
+      color: #fff;
+      border-color: var(--blue);
+      font-weight: 500;
+    }
+
+    nav { height: 84px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
+    .brand { font-size: 14px; font-weight: 600; }
+    .brand span { color: var(--blue); }
+    .menu { display: flex; gap: 30px; font-size: 12px; color: var(--muted); }
+    .menu a:hover { color: var(--ice); }
+    
+    .hero { min-height: 82vh; padding: 64px 0 88px; display: flex; flex-direction: column; justify-content: center; }
+    .hero-main { display: flex; align-items: stretch; gap: 34px; min-width: 0; }
+    .retired-rail {
+      width: 58px; flex: 0 0 58px;
+      border-right: 1px solid rgba(220,232,245,.45);
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+    }
+    .retired-rail span {
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      letter-spacing: .13em;
+      font-size: 15px;
+      font-weight: 600;
+      text-transform: none;
+      color: transparent;
+      background: linear-gradient(90deg, #7b1f24 0%, #c84a4f 22%, #8f2b30 48%, #d05a5f 72%, #6d1a1f 100%), repeating-linear-gradient(163deg, transparent 0 5px, rgba(5,10,17,.86) 6px 7px, transparent 8px 13px);
+      background-blend-mode: multiply;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-stroke: .25px rgba(222,104,109,.38);
+      filter: contrast(1.35) brightness(.92);
+      text-shadow: 0 0 8px rgba(200,74,79,.06);
+    }
+    .hero-copy { min-width: 0; flex: 1; max-width: 100%; }
+    .overline { margin-bottom: 26px; font-size: 11px; letter-spacing: .18em; text-transform: none; color: var(--blue2); }
+    .wordmark { white-space: nowrap; line-height: .82; max-width: 100%; margin: 0; font-weight: normal; }
+    .wordmark span { font-size: clamp(68px, 11vw, 150px); font-weight: 300; letter-spacing: -.075em; }
+    .musa { color: #f1eee8; }
+    .divarci { color: var(--blue); font-weight: 400 !important; }
+    .tagline { margin-top: 34px; font-size: 11px; letter-spacing: .28em; color: #c7d0da; }
+    .tagline:before { content: ""; display: block; width: 56px; height: 1px; background: var(--blue); margin-bottom: 22px; }
+    .tagline strong { font-weight: 400; color: var(--blue2); }
+
+    /* ======================================================== */
+    /* PORTRAIT STYLES FOR VARIANT A: Hero Top-Right Card       */
+    /* ======================================================== */
+    .hero-flex-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+      min-width: 0;
+    }
+    .portrait-hero-card {
+      position: relative;
+      flex: 0 0 280px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .portrait-frame-a {
+      position: relative;
+      width: 250px;
+      height: 250px;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(131, 169, 216, 0.28);
+      box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.65), 0 0 32px -8px rgba(75, 134, 216, 0.22);
+      background: #0b1726;
+      transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+    }
+    .portrait-frame-a:hover {
+      transform: translateY(-4px);
+      border-color: rgba(131, 169, 216, 0.55);
+      box-shadow: 0 32px 56px -12px rgba(0, 0, 0, 0.75), 0 0 40px -6px rgba(75, 134, 216, 0.35);
+    }
+    .portrait-frame-a img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: contrast(1.03) brightness(.98);
+    }
+    .portrait-frame-a::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 16px;
+      box-shadow: inset 0 0 20px rgba(7, 16, 26, 0.35);
+      pointer-events: none;
+    }
+    .portrait-caption-a {
+      margin-top: 14px;
+      text-align: center;
+      font-size: 11px;
+      letter-spacing: .08em;
+      color: var(--muted);
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .portrait-caption-a strong {
+      color: var(--ice);
+      font-weight: 500;
+      letter-spacing: .04em;
+    }
+    .portrait-caption-a span {
+      font-size: 10px;
+      color: var(--blue2);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* ======================================================== */
+    /* PORTRAIT STYLES FOR VARIANT B: Hero Grid Integrated      */
+    /* ======================================================== */
+    .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: end; margin-top: 58px; min-width: 0; }
+    .role { font-size: clamp(22px, 2.4vw, 35px); line-height: 1.12; letter-spacing: -.035em; color: #aeb9c6; }
+    .hero-meta { display: flex; gap: 28px; margin-top: 22px; font-size: 11px; color: #6f8195; letter-spacing: .1em; }
+    .tech-line { margin-top: 11px; font-size: 9px; letter-spacing: .16em; color: #637386; overflow-wrap: anywhere; }
+    .tech-line span { margin: 0 8px; color: rgba(75,134,216,.42); }
+    .summary { font-size: 15px; line-height: 1.75; color: #aeb9c6; max-width: 590px; }
+    .motto { margin-top: 26px; max-width: 580px; }
+    .motto-main { font-family: 'DM Serif Display', Georgia, serif; font-size: clamp(24px, 2.5vw, 34px); line-height: 1.15; color: #dce8f5; letter-spacing: -.025em; }
+    .motto-sub { margin-top: 8px; font-size: 10px; letter-spacing: .12em; color: #6883a3; }
+
+    .portrait-block-b {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      margin-bottom: 24px;
+      padding: 18px 22px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+    .portrait-block-b img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--blue2);
+      box-shadow: 0 0 20px rgba(75,134,216,.25);
+    }
+    .portrait-b-info {
+      font-size: 13px;
+    }
+    .portrait-b-info .p-name {
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--ice);
+    }
+    .portrait-b-info .p-title {
+      font-size: 11px;
+      color: var(--blue2);
+      margin-top: 3px;
+      letter-spacing: .06em;
+    }
+    .portrait-b-info .p-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 10px;
+      color: #70d6a3;
+      margin-top: 8px;
+      background: rgba(112, 214, 163, 0.1);
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+    .portrait-b-info .p-status::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      background: #70d6a3;
+      border-radius: 50%;
+      box-shadow: 0 0 6px #70d6a3;
+    }
+
+    /* ======================================================== */
+    /* PORTRAIT STYLES FOR VARIANT C: Editorial / Nature Card   */
+    /* ======================================================== */
+    .nature-portrait-card {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+      background: rgba(255,255,255,.015);
+      display: flex;
+      flex-direction: column;
+    }
+    .nature-portrait-card img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      object-position: center top;
+      filter: contrast(1.05);
+    }
+    .nature-portrait-card .p-caption {
+      padding: 18px 22px;
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.6;
+      border-top: 1px solid var(--line);
+    }
+    .nature-portrait-card .p-caption strong {
+      color: var(--ice);
+      display: block;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    section { padding: 90px 0; border-top: 1px solid var(--line); }
+    .head { display: grid; grid-template-columns: 230px 1fr; gap: 70px; margin-bottom: 56px; }
+    .kicker { font-size: 11px; letter-spacing: .18em; color: var(--blue2); }
+    h2 { font-size: clamp(40px, 5.5vw, 76px); line-height: .93; letter-spacing: -.055em; margin: 0; font-weight: 400; }
+    .nature-grid { display: grid; grid-template-columns: 230px 1fr 1fr; gap: 60px; }
+    .nature-copy h2 { font-family: 'DM Serif Display', serif; font-size: clamp(40px, 5vw, 72px); line-height: .95; margin: 0 0 24px; font-weight: 400; }
+    .nature-copy p { font-size: 15px; line-height: 1.75; color: #aeb9c6; }
+    .nature-note { border-left: 1px solid rgba(131,169,216,.35); padding-left: 28px; color: #8396aa; font-size: 13px; line-height: 1.8; }
+    .nature-note strong { display: block; color: #cfdbea; font-size: 16px; font-weight: 400; margin-bottom: 8px; }
+
+    footer { padding: 30px 0 46px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; font-size: 11px; color: #637487; }
+    .footer-motto { font-size: 10px; letter-spacing: .16em; color: #6986a7; }
+
+    /* Responsive */
+    @media (max-width: 980px) {
+      .hero-flex-wrap { flex-direction: column; align-items: flex-start; }
+      .portrait-hero-card { margin-top: 24px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+      .nature-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Demo Controls -->
+  <aside class="demo-bar">
+    <div class="demo-title">
+      PORTRE DEMO ÖNİZLEME
+      <span class="demo-badge">musa-divarci.webp</span>
+    </div>
+    <div class="demo-buttons">
+      <button class="demo-btn active" onclick="setVariant('A')">Varyasyon A: Hero Sağ Kanat</button>
+      <button class="demo-btn" onclick="setVariant('B')">Varyasyon B: Hero Grid (Kompakt)</button>
+      <button class="demo-btn" onclick="setVariant('C')">Varyasyon C: Doğa & Biyografi Kartı</button>
+      <button class="demo-btn" onclick="setVariant('ALL')" style="border-color: rgba(75,134,216,.5);">Hepsini Gör</button>
+    </div>
+  </aside>
+
+  <div class="wrap">
+    <nav>
+      <div class="brand">musa<span>Divarcı</span></div>
+      <div class="menu">
+        <a href="#experience">Deneyim</a>
+        <a href="#projects">Projeler</a>
+        <a href="#articles">Yazılar</a>
+        <a href="#areas">Alanlar</a>
+        <a href="/professional-profile">Profesyonel Profil</a>
+        <a href="#nature">Doğa</a>
+      </div>
+    </nav>
+    
+    <header class="hero">
+      <div class="hero-main">
+        <div class="retired-rail"><span>RETIRED</span></div>
+        <div class="hero-copy">
+          <div class="hero-flex-wrap">
+            <div>
+              <div class="overline">SOFTWARE DEVELOPMENT &amp; INFORMATION SYSTEMS</div>
+              <h1 class="wordmark"><span class="musa">musa</span><span class="divarci">Divarcı</span></h1>
+              <div class="tagline">I had to do it the <strong>hard way</strong></div>
+            </div>
+
+            <!-- VARYASYON A: Hero Sağ Portre Kartı -->
+            <div class="portrait-hero-card var-item var-A">
+              <div class="portrait-frame-a">
+                <img src="/musa-divarci.webp" alt="Musa DİVARCI — Yazılım Geliştirici ve Bilişim Profesyoneli" loading="eager" width="250" height="250">
+              </div>
+              <div class="portrait-caption-a">
+                <strong>Musa DİVARCI</strong>
+                <span>VERIFIED TECH ENTITY · SINCE 2001</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-grid">
+        <div>
+          <!-- VARYASYON B: Hero Grid İçi Kompakt Profil Kartı -->
+          <div class="portrait-block-b var-item var-B" style="display: none;">
+            <img src="/musa-divarci.webp" alt="Musa DİVARCI" width="100" height="100">
+            <div class="portrait-b-info">
+              <div class="p-name">Musa DİVARCI</div>
+              <div class="p-title">.NET / C# · Clean Architecture · Enterprise IT</div>
+              <div class="p-status">Aktif & Bağımsız Geliştirici</div>
+            </div>
+          </div>
+
+          <div class="role">Yazılım Geliştirici · Software Developer<br>.NET / C# · Systems · Architecture</div>
+          <div class="hero-meta"><span>Since 2001</span><span>Türkiye</span></div>
+          <div class="tech-line">C# <span>·</span> .NET <span>·</span> ASP.NET Core <span>·</span> SQL <span>·</span> Python <span>·</span> TypeScript <span>·</span> React <span>·</span> Cisco</div>
+        </div>
+        <div>
+          <div class="summary">2001 yılında web ve sunucu taraflı geliştirme ile başlayan, .NET/C#, veritabanı mimarileri, sistem ve ağ teknolojileri üzerinden teknoloji yönetimine uzanan 20 yılı aşkın yazılım geliştirme ve bilişim deneyimi.</div>
+          <div class="motto">
+            <div class="motto-main">Bunun nasıl çalıştığını merak ediyorum.</div>
+            <div class="motto-sub">I WONDER HOW THIS WORKS.</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="nature">
+      <div class="nature-grid">
+        <div class="kicker">05 / Doğa ve Yaşam</div>
+        <div class="nature-copy">
+          <h2>Nature as a<br>way of life.</h2>
+          <p>Doğa benim için bir ilgi alanı ya da hafta sonu kaçamağı değil; yaşam biçiminin kendisi. Bitkilerle, toprakla, kırsal yaşamla ve mevsimlerin doğal ritmiyle kurduğum bağ gündelik hayatımın önemli bir parçası. Teknolojinin yoğunluğu içinde doğada olmak benim için bir denge arayışı değil, zaten tercih ettiğim hayatın doğal hali.</p>
+        </div>
+
+        <!-- VARYASYON C: Doğa & Felsefe Portre Kartı -->
+        <div class="nature-portrait-card var-item var-C" style="display: none;">
+          <img src="/musa-divarci.webp" alt="Musa DİVARCI — Kırsal Yaşam ve Mühendislik">
+          <div class="p-caption">
+            <strong>Musa DİVARCI</strong>
+            Yazılım mimarisindeki sadelik ve dayanıklılık prensiplerini, doğadaki doğal dengelerle bütünleştiren mühendislik felsefesi.
+          </div>
+        </div>
+
+        <div class="nature-note var-item var-note">
+          <strong>Sadelik ve Denge</strong>
+          Karmaşık sistemleri yönetirken doğanın yalınlığından beslenmek; yapay hırslardan uzak, sağlam temellere dayalı ve sürdürülebilir mimariler kurmanın en iyi yoludur.
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>Musa DİVARCI · musadivarci.com.tr · 2001 - 2026</div>
+      <div class="footer-motto">I HAD TO DO IT THE HARD WAY</div>
+    </footer>
+  </div>
+
+  <script>
+    function setVariant(variant) {
+      document.querySelectorAll('.demo-btn').forEach(btn => btn.classList.remove('active'));
+      const buttons = document.querySelectorAll('.demo-btn');
+      if (variant === 'A') buttons[0].classList.add('active');
+      else if (variant === 'B') buttons[1].classList.add('active');
+      else if (variant === 'C') buttons[2].classList.add('active');
+      else if (variant === 'ALL') buttons[3].classList.add('active');
+
+      const itemA = document.querySelector('.var-A');
+      const itemB = document.querySelector('.var-B');
+      const itemC = document.querySelector('.var-C');
+      const itemNote = document.querySelector('.var-note');
+
+      if (variant === 'A') {
+        itemA.style.display = 'flex';
+        itemB.style.display = 'none';
+        itemC.style.display = 'none';
+        itemNote.style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else if (variant === 'B') {
+        itemA.style.display = 'none';
+        itemB.style.display = 'flex';
+        itemC.style.display = 'none';
+        itemNote.style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else if (variant === 'C') {
+        itemA.style.display = 'none';
+        itemB.style.display = 'none';
+        itemC.style.display = 'flex';
+        itemNote.style.display = 'block';
+        document.getElementById('nature').scrollIntoView({ behavior: 'smooth' });
+      } else if (variant === 'ALL') {
+        itemA.style.display = 'flex';
+        itemB.style.display = 'flex';
+        itemC.style.display = 'flex';
+        itemNote.style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>
