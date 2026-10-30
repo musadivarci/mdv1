@@ -22,7 +22,17 @@
       "name": "Musa DİVARCI",
       "alternateName": ["Musa Divarcı", "Musa Divarci"],
       "url": "https://www.musadivarci.com.tr/",
-      "image": "https://www.musadivarci.com.tr/musa-divarci.jpg",
+      "image": {
+        "@type": "ImageObject",
+        "@id": "https://www.musadivarci.com.tr/#primaryimage",
+        "url": "https://www.musadivarci.com.tr/musa-divarci.jpg",
+        "contentUrl": "https://www.musadivarci.com.tr/musa-divarci.jpg",
+        "caption": "Musa DİVARCI — Yazılım Geliştirici ve Bilişim Profesyoneli",
+        "description": "Musa DİVARCI resmi profil ve portre fotoğrafı",
+        "width": 1024,
+        "height": 1024,
+        "representativeOfPage": true
+      },
   "sameAs": [
     "https://github.com/musadivarci",
     "https://medium.com/@musadivarci19",

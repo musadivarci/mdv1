@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://www.musadivarci.com.tr/musa-divarci.jpg" width="120" height="120" alt="Musa DİVARCI" style="border-radius: 50%; object-fit: cover;">
+</p>
+
 # Hi, I'm Musa DİVARCI 👋
 
 ### Senior Software Developer · .NET / C# Specialist · Technology Leader
