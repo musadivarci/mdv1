@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Musa DİVARCI | Portre Tasarım Demo Seçenekleri</title>
+  <title>Musa DİVARCI | Yeni Nesil Transparan Portre Konseptleri</title>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <style>
@@ -16,6 +16,8 @@
       --blue: #4b86d8;
       --blue2: #83a9d8;
       --ice: #dce8f5;
+      --amber: #c4603b;
+      --amber-glow: rgba(196, 96, 59, 0.35);
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; max-width: 100%; overflow-x: hidden; }
@@ -26,78 +28,85 @@
       color: var(--ink);
       font-family: 'DM Sans', Arial, sans-serif;
       overflow-x: hidden;
-      padding-top: 60px; /* Space for demo bar */
+      padding-top: 68px;
     }
     a { color: inherit; text-decoration: none; }
-    .wrap { width: min(1320px, calc(100% - 72px)); margin: auto; }
+    .wrap { width: min(1320px, calc(100% - 72px)); margin: auto; position: relative; z-index: 1; }
     
-    /* Demo Switcher Bar */
+    /* Sticky Top Switcher Bar */
     .demo-bar {
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
-      height: 60px;
-      background: rgba(11, 20, 32, 0.94);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(75,134,216,.3);
+      height: 68px;
+      background: rgba(7, 16, 26, 0.95);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(131, 169, 216, 0.25);
+      z-index: 100;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 28px;
-      z-index: 1000;
+      padding: 0 32px;
     }
     .demo-title {
       font-size: 13px;
       font-weight: 600;
-      letter-spacing: .05em;
+      letter-spacing: .06em;
       color: var(--ice);
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
     }
     .demo-badge {
-      background: rgba(75,134,216,.2);
-      color: var(--blue2);
-      padding: 2px 8px;
-      border-radius: 4px;
+      background: linear-gradient(135deg, rgba(196, 96, 59, 0.3), rgba(75, 134, 216, 0.2));
+      color: #f7a07a;
+      border: 1px solid rgba(196, 96, 59, 0.4);
+      padding: 3px 10px;
+      border-radius: 999px;
       font-size: 11px;
       font-family: 'JetBrains Mono', monospace;
+      letter-spacing: .04em;
     }
     .demo-buttons {
       display: flex;
-      gap: 10px;
+      gap: 8px;
+      flex-wrap: wrap;
     }
     .demo-btn {
       background: rgba(255,255,255,.05);
       border: 1px solid var(--line);
       color: var(--muted);
-      padding: 7px 14px;
-      border-radius: 6px;
+      padding: 8px 16px;
+      border-radius: 8px;
       font-size: 12px;
       cursor: pointer;
       font-family: inherit;
-      transition: all .2s ease;
+      transition: all .25s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
     .demo-btn:hover {
       color: var(--ink);
       border-color: var(--blue2);
+      transform: translateY(-1px);
     }
     .demo-btn.active {
-      background: var(--blue);
+      background: linear-gradient(135deg, #3d76c6 0%, #2b5ea6 100%);
       color: #fff;
-      border-color: var(--blue);
+      border-color: var(--blue2);
       font-weight: 500;
+      box-shadow: 0 4px 18px rgba(75, 134, 216, 0.4);
     }
 
-    nav { height: 84px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
+    nav { height: 80px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
     .brand { font-size: 14px; font-weight: 600; }
     .brand span { color: var(--blue); }
     .menu { display: flex; gap: 30px; font-size: 12px; color: var(--muted); }
-    .menu a:hover { color: var(--ice); }
     
-    .hero { min-height: 82vh; padding: 64px 0 88px; display: flex; flex-direction: column; justify-content: center; }
+    .hero { min-height: 82vh; padding: 60px 0 80px; display: flex; flex-direction: column; justify-content: center; }
     .hero-main { display: flex; align-items: stretch; gap: 34px; min-width: 0; }
     .retired-rail {
       width: 58px; flex: 0 0 58px;
@@ -111,7 +120,6 @@
       letter-spacing: .13em;
       font-size: 15px;
       font-weight: 600;
-      text-transform: none;
       color: transparent;
       background: linear-gradient(90deg, #7b1f24 0%, #c84a4f 22%, #8f2b30 48%, #d05a5f 72%, #6d1a1f 100%), repeating-linear-gradient(163deg, transparent 0 5px, rgba(5,10,17,.86) 6px 7px, transparent 8px 13px);
       background-blend-mode: multiply;
@@ -119,219 +127,340 @@
       background-clip: text;
       -webkit-text-stroke: .25px rgba(222,104,109,.38);
       filter: contrast(1.35) brightness(.92);
-      text-shadow: 0 0 8px rgba(200,74,79,.06);
     }
-    .hero-copy { min-width: 0; flex: 1; max-width: 100%; }
-    .overline { margin-bottom: 26px; font-size: 11px; letter-spacing: .18em; text-transform: none; color: var(--blue2); }
-    .wordmark { white-space: nowrap; line-height: .82; max-width: 100%; margin: 0; font-weight: normal; }
-    .wordmark span { font-size: clamp(68px, 11vw, 150px); font-weight: 300; letter-spacing: -.075em; }
-    .musa { color: #f1eee8; }
-    .divarci { color: var(--blue); font-weight: 400 !important; }
-    .tagline { margin-top: 34px; font-size: 11px; letter-spacing: .28em; color: #c7d0da; }
-    .tagline:before { content: ""; display: block; width: 56px; height: 1px; background: var(--blue); margin-bottom: 22px; }
-    .tagline strong { font-weight: 400; color: var(--blue2); }
-
-    /* ======================================================== */
-    /* PORTRAIT STYLES FOR VARIANT A: Hero Top-Right Card       */
-    /* ======================================================== */
+    .hero-copy { flex: 1; min-width: 0; }
     .hero-flex-wrap {
       display: flex;
+      align-items: center;
       justify-content: space-between;
-      align-items: center;
-      gap: 40px;
-      min-width: 0;
+      gap: 36px;
     }
-    .portrait-hero-card {
+    .overline { margin-bottom: 24px; font-size: 11px; letter-spacing: .18em; color: var(--blue2); }
+    .wordmark { white-space: nowrap; line-height: .84; margin: 0; font-weight: normal; }
+    .wordmark .musa { font-family: 'DM Sans', Arial, sans-serif; font-size: clamp(60px, 9.5vw, 128px); font-weight: 600; letter-spacing: -.06em; color: #fff; }
+    .wordmark .divarci { font-family: 'DM Serif Display', Georgia, serif; font-size: clamp(66px, 10.5vw, 142px); font-weight: 400; letter-spacing: -.03em; color: #83a9d8; margin-left: .04em; }
+    .tagline { margin-top: 22px; font-size: 14px; letter-spacing: .04em; color: #b7c7d9; }
+    .tagline strong { color: #fff; font-weight: 500; }
+
+    /* ========================================================================== */
+    /* YENİ NESİL KONSEPT 1: "Atmospheric Halo / Floating Cutout" (Çerçevesiz Aura) */
+    /* ========================================================================== */
+    .nextgen-halo-wrap {
       position: relative;
-      flex: 0 0 280px;
+      width: 320px;
+      height: 380px;
       display: flex;
-      flex-direction: column;
-      align-items: center;
+      align-items: flex-end;
+      justify-content: center;
     }
-    .portrait-frame-a {
-      position: relative;
-      width: 250px;
-      height: 250px;
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid rgba(131, 169, 216, 0.28);
-      box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.65), 0 0 32px -8px rgba(75, 134, 216, 0.22);
-      background: #0b1726;
-      transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
-    }
-    .portrait-frame-a:hover {
-      transform: translateY(-4px);
-      border-color: rgba(131, 169, 216, 0.55);
-      box-shadow: 0 32px 56px -12px rgba(0, 0, 0, 0.75), 0 0 40px -6px rgba(75, 134, 216, 0.35);
-    }
-    .portrait-frame-a img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      filter: contrast(1.03) brightness(.98);
-    }
-    .portrait-frame-a::after {
-      content: "";
+    /* Arka Plan Atmosferik Işık Haleleri */
+    .nextgen-halo-backlight {
       position: absolute;
-      inset: 0;
-      border-radius: 16px;
-      box-shadow: inset 0 0 20px rgba(7, 16, 26, 0.35);
-      pointer-events: none;
-    }
-    .portrait-caption-a {
-      margin-top: 14px;
-      text-align: center;
-      font-size: 11px;
-      letter-spacing: .08em;
-      color: var(--muted);
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-    }
-    .portrait-caption-a strong {
-      color: var(--ice);
-      font-weight: 500;
-      letter-spacing: .04em;
-    }
-    .portrait-caption-a span {
-      font-size: 10px;
-      color: var(--blue2);
-      font-family: 'JetBrains Mono', monospace;
-    }
-
-    /* ======================================================== */
-    /* PORTRAIT STYLES FOR VARIANT B: Hero Grid Integrated      */
-    /* ======================================================== */
-    .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: end; margin-top: 58px; min-width: 0; }
-    .role { font-size: clamp(22px, 2.4vw, 35px); line-height: 1.12; letter-spacing: -.035em; color: #aeb9c6; }
-    .hero-meta { display: flex; gap: 28px; margin-top: 22px; font-size: 11px; color: #6f8195; letter-spacing: .1em; }
-    .tech-line { margin-top: 11px; font-size: 9px; letter-spacing: .16em; color: #637386; overflow-wrap: anywhere; }
-    .tech-line span { margin: 0 8px; color: rgba(75,134,216,.42); }
-    .summary { font-size: 15px; line-height: 1.75; color: #aeb9c6; max-width: 590px; }
-    .motto { margin-top: 26px; max-width: 580px; }
-    .motto-main { font-family: 'DM Serif Display', Georgia, serif; font-size: clamp(24px, 2.5vw, 34px); line-height: 1.15; color: #dce8f5; letter-spacing: -.025em; }
-    .motto-sub { margin-top: 8px; font-size: 10px; letter-spacing: .12em; color: #6883a3; }
-
-    .portrait-block-b {
-      display: flex;
-      align-items: center;
-      gap: 26px;
-      margin-bottom: 24px;
-      padding: 18px 22px;
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid var(--line);
-      border-radius: 12px;
-    }
-    .portrait-block-b img {
-      width: 100px;
-      height: 100px;
+      top: 42%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 290px;
+      height: 290px;
+      background: radial-gradient(circle, rgba(196, 96, 59, 0.42) 0%, rgba(75, 134, 216, 0.22) 42%, transparent 72%);
+      filter: blur(32px);
       border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid var(--blue2);
-      box-shadow: 0 0 20px rgba(75,134,216,.25);
+      pointer-events: none;
+      z-index: 0;
+      transition: all .5s ease;
     }
-    .portrait-b-info {
-      font-size: 13px;
+    .nextgen-halo-wrap:hover .nextgen-halo-backlight {
+      width: 330px;
+      height: 330px;
+      background: radial-gradient(circle, rgba(215, 110, 70, 0.55) 0%, rgba(75, 134, 216, 0.3) 45%, transparent 75%);
     }
-    .portrait-b-info .p-name {
-      font-size: 18px;
-      font-weight: 500;
-      color: var(--ice);
+    /* Transparan Portre */
+    .nextgen-halo-img {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      display: block;
+      -webkit-mask-image: linear-gradient(to bottom, black 78%, transparent 100%);
+      mask-image: linear-gradient(to bottom, black 78%, transparent 100%);
+      filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.85)) drop-shadow(0 0 24px rgba(196, 96, 59, 0.25));
+      transition: transform .4s cubic-bezier(0.16, 1, 0.3, 1), filter .4s ease;
     }
-    .portrait-b-info .p-title {
-      font-size: 11px;
-      color: var(--blue2);
-      margin-top: 3px;
-      letter-spacing: .06em;
+    .nextgen-halo-wrap:hover .nextgen-halo-img {
+      transform: translateY(-4px) scale(1.02);
+      filter: drop-shadow(0 28px 50px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 35px rgba(215, 110, 70, 0.4));
     }
-    .portrait-b-info .p-status {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
+    /* Yüzen Mikro Rozet (Glass Chip) */
+    .floating-chip {
+      position: absolute;
+      top: 24px;
+      right: 0px;
+      background: rgba(7, 16, 26, 0.82);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(131, 169, 216, 0.3);
+      padding: 6px 12px;
+      border-radius: 999px;
       font-size: 10px;
-      color: #70d6a3;
-      margin-top: 8px;
-      background: rgba(112, 214, 163, 0.1);
-      padding: 2px 8px;
-      border-radius: 4px;
+      letter-spacing: .08em;
+      color: var(--ice);
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      z-index: 2;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
     }
-    .portrait-b-info .p-status::before {
+    .floating-chip::before {
       content: "";
       width: 6px;
       height: 6px;
-      background: #70d6a3;
+      background: #4ade80;
       border-radius: 50%;
-      box-shadow: 0 0 6px #70d6a3;
+      box-shadow: 0 0 8px #4ade80;
     }
 
-    /* ======================================================== */
-    /* PORTRAIT STYLES FOR VARIANT C: Editorial / Nature Card   */
-    /* ======================================================== */
-    .nature-portrait-card {
-      border: 1px solid var(--line);
-      border-radius: 12px;
+    /* ========================================================================== */
+    /* YENİ NESİL KONSEPT 2: "3D Pop-Out Glass Card" (Karttan Taşan Heykelsi 3D)   */
+    /* ========================================================================== */
+    .nextgen-popout-wrap {
+      position: relative;
+      width: 290px;
+      height: 380px;
+      user-select: none;
+    }
+    /* Arka Cam Panel (Baş dışarıda kalır) */
+    .nextgen-popout-card {
+      position: absolute;
+      bottom: 0;
+      left: 15px;
+      right: 15px;
+      height: 290px;
+      border-radius: 24px;
+      background: linear-gradient(160deg, rgba(16, 32, 54, 0.65) 0%, rgba(7, 16, 26, 0.9) 100%);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(196, 96, 59, 0.35);
+      box-shadow: 0 30px 60px -15px rgba(0,0,0,0.9), inset 0 0 25px rgba(131, 169, 216, 0.08);
       overflow: hidden;
-      background: rgba(255,255,255,.015);
+      transition: all .35s ease;
+    }
+    .nextgen-popout-wrap:hover .nextgen-popout-card {
+      border-color: rgba(220, 140, 100, 0.65);
+      box-shadow: 0 40px 70px -15px rgba(0,0,0,0.95), 0 0 35px -5px rgba(196, 96, 59, 0.35);
+    }
+    /* Kart Altındaki Minimalist Metin */
+    .popout-card-label {
+      position: absolute;
+      bottom: 16px;
+      left: 20px;
+      right: 20px;
       display: flex;
-      flex-direction: column;
-    }
-    .nature-portrait-card img {
-      width: 100%;
-      height: 280px;
-      object-fit: cover;
-      object-position: center top;
-      filter: contrast(1.05);
-    }
-    .nature-portrait-card .p-caption {
-      padding: 18px 22px;
-      font-size: 12px;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
       color: var(--muted);
-      line-height: 1.6;
+      letter-spacing: .08em;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 10px;
+      z-index: 1;
+    }
+    .popout-card-label strong { color: var(--ice); font-weight: 500; }
+    /* Karttan Taşan Transparan Portre (Baş ve omuzlar kartın dışına taşar) */
+    .nextgen-popout-img {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 290px;
+      height: auto;
+      z-index: 2;
+      pointer-events: none;
+      filter: drop-shadow(0 15px 25px rgba(0,0,0,0.7));
+      -webkit-mask-image: linear-gradient(to bottom, black 88%, transparent 100%);
+      mask-image: linear-gradient(to bottom, black 88%, transparent 100%);
+      transition: transform .35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .nextgen-popout-wrap:hover .nextgen-popout-img {
+      transform: translateX(-50%) translateY(-6px) scale(1.02);
+    }
+
+    /* ========================================================================== */
+    /* YENİ NESİL KONSEPT 3: "Editorial Typo Layer" (Tipografiyle İç İçe / Magazine)*/
+    /* ========================================================================== */
+    .nextgen-typo-wrap {
+      position: relative;
+      width: 320px;
+      height: 380px;
+      display: flex;
+      align-items: flex-end;
+    }
+    /* Arka Dev Tipografik Su Damgası */
+    .nextgen-typo-ghost {
+      position: absolute;
+      top: 20px;
+      left: -20px;
+      font-family: 'DM Serif Display', serif;
+      font-size: 96px;
+      line-height: .85;
+      color: rgba(131, 169, 216, 0.08);
+      letter-spacing: -.04em;
+      pointer-events: none;
+      user-select: none;
+      z-index: 0;
+      white-space: nowrap;
+    }
+    /* Transparan Portre */
+    .nextgen-typo-img {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: auto;
+      display: block;
+      -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+      mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+      filter: drop-shadow(0 20px 40px rgba(0,0,0,0.8));
+    }
+    /* Mimari Çizgi & Koordinat */
+    .nextgen-typo-tag {
+      position: absolute;
+      bottom: 12px;
+      right: 0;
+      z-index: 2;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      color: var(--amber);
+      background: rgba(7,16,26,0.9);
+      padding: 4px 10px;
+      border-left: 2px solid var(--amber);
+      letter-spacing: .12em;
+    }
+
+    /* ========================================================================== */
+    /* YENİ NESİL KONSEPT 4: "Architectural Grid Plate" (Teknik Blueprint / Minimal)*/
+    /* ========================================================================== */
+    .nextgen-blueprint-wrap {
+      position: relative;
+      width: 290px;
+      height: 380px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    /* Noktalı Matris Blueprint Plakası */
+    .nextgen-blueprint-plate {
+      position: absolute;
+      inset: 30px 10px 0 10px;
+      border-radius: 16px;
+      border: 1px solid rgba(131, 169, 216, 0.22);
+      background-color: rgba(9, 20, 34, 0.5);
+      background-image: radial-gradient(rgba(131, 169, 216, 0.25) 1px, transparent 1px);
+      background-size: 16px 16px;
+      z-index: 0;
+    }
+    .blueprint-corner-tl {
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      width: 12px;
+      height: 12px;
+      border-top: 2px solid var(--amber);
+      border-left: 2px solid var(--amber);
+    }
+    .blueprint-corner-br {
+      position: absolute;
+      bottom: -1px;
+      right: -1px;
+      width: 12px;
+      height: 12px;
+      border-bottom: 2px solid var(--blue2);
+      border-right: 2px solid var(--blue2);
+    }
+    .blueprint-badge {
+      position: absolute;
+      top: 10px;
+      left: 14px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      color: rgba(220, 232, 245, 0.5);
+      letter-spacing: .1em;
+    }
+    .nextgen-blueprint-img {
+      position: relative;
+      z-index: 1;
+      width: 290px;
+      height: auto;
+      display: block;
+      -webkit-mask-image: linear-gradient(to bottom, black 84%, transparent 100%);
+      mask-image: linear-gradient(to bottom, black 84%, transparent 100%);
+      filter: drop-shadow(0 20px 35px rgba(0,0,0,0.85));
+      transition: transform .35s ease;
+    }
+    .nextgen-blueprint-wrap:hover .nextgen-blueprint-img {
+      transform: translateY(-4px);
+    }
+
+    /* Hero Grid & Bottom Sections */
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      margin-top: 72px;
+      padding-top: 48px;
       border-top: 1px solid var(--line);
     }
-    .nature-portrait-card .p-caption strong {
-      color: var(--ice);
-      display: block;
+    .role { font-size: 20px; line-height: 1.35; font-weight: 400; color: #fff; margin-bottom: 18px; }
+    .hero-meta { display: flex; gap: 20px; font-size: 12px; color: var(--muted); margin-bottom: 24px; }
+    .tech-line { font-size: 13px; color: #a9bed6; }
+    .tech-line span { color: var(--blue); margin: 0 4px; }
+    .summary { font-size: 15px; line-height: 1.7; color: #a2b2c4; margin-bottom: 26px; }
+    .motto { border-left: 2px solid var(--blue); padding-left: 18px; }
+    .motto-main { font-size: 14px; color: var(--ice); margin-bottom: 4px; }
+    .motto-sub { font-size: 11px; letter-spacing: .16em; color: var(--muted); }
+
+    .concept-card {
+      margin-top: 40px;
+      padding: 22px 28px;
+      background: rgba(11, 23, 38, 0.55);
+      border-left: 3px solid var(--amber);
+      border-radius: 0 8px 8px 0;
+      font-size: 13px;
+      color: #9ab0c7;
+      line-height: 1.6;
+    }
+    .concept-card strong {
+      color: #fff;
       font-size: 14px;
-      margin-bottom: 4px;
+      display: block;
+      margin-bottom: 6px;
     }
 
-    section { padding: 90px 0; border-top: 1px solid var(--line); }
-    .head { display: grid; grid-template-columns: 230px 1fr; gap: 70px; margin-bottom: 56px; }
-    .kicker { font-size: 11px; letter-spacing: .18em; color: var(--blue2); }
-    h2 { font-size: clamp(40px, 5.5vw, 76px); line-height: .93; letter-spacing: -.055em; margin: 0; font-weight: 400; }
-    .nature-grid { display: grid; grid-template-columns: 230px 1fr 1fr; gap: 60px; }
-    .nature-copy h2 { font-family: 'DM Serif Display', serif; font-size: clamp(40px, 5vw, 72px); line-height: .95; margin: 0 0 24px; font-weight: 400; }
-    .nature-copy p { font-size: 15px; line-height: 1.75; color: #aeb9c6; }
-    .nature-note { border-left: 1px solid rgba(131,169,216,.35); padding-left: 28px; color: #8396aa; font-size: 13px; line-height: 1.8; }
-    .nature-note strong { display: block; color: #cfdbea; font-size: 16px; font-weight: 400; margin-bottom: 8px; }
+    /* Variant Containers */
+    .var-panel { display: none; }
+    .var-panel.active { display: block; }
 
-    footer { padding: 30px 0 46px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; font-size: 11px; color: #637487; }
-    .footer-motto { font-size: 10px; letter-spacing: .16em; color: #6986a7; }
-
-    /* Responsive */
-    @media (max-width: 980px) {
+    @media(max-width: 880px) {
+      .wrap { width: calc(100% - 30px); margin: 0 15px; }
+      .demo-bar { padding: 0 16px; height: auto; padding-top: 10px; padding-bottom: 10px; flex-direction: column; gap: 8px; align-items: flex-start; }
+      body { padding-top: 105px; }
       .hero-flex-wrap { flex-direction: column; align-items: flex-start; }
-      .portrait-hero-card { margin-top: 24px; }
-      .hero-grid { grid-template-columns: 1fr; gap: 40px; }
-      .nature-grid { grid-template-columns: 1fr; }
+      .hero-grid { grid-template-columns: 1fr; gap: 36px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Floating Demo Controls -->
+  <!-- Sticky Demo Switcher Bar -->
   <aside class="demo-bar">
     <div class="demo-title">
-      PORTRE DEMO ÖNİZLEME
-      <span class="demo-badge">musa-divarci.webp</span>
+      YENİ NESİL TRANSPARAN PORTRE
+      <span class="demo-badge">4 Havalı Konsept</span>
     </div>
     <div class="demo-buttons">
-      <button class="demo-btn active" onclick="setVariant('A')">Varyasyon A: Hero Sağ Kanat</button>
-      <button class="demo-btn" onclick="setVariant('B')">Varyasyon B: Hero Grid (Kompakt)</button>
-      <button class="demo-btn" onclick="setVariant('C')">Varyasyon C: Doğa & Biyografi Kartı</button>
-      <button class="demo-btn" onclick="setVariant('ALL')" style="border-color: rgba(75,134,216,.5);">Hepsini Gör</button>
+      <button class="demo-btn active" onclick="switchConcept('1')">1. Atmosferik Işık (Halo)</button>
+      <button class="demo-btn" onclick="switchConcept('2')">2. 3D Pop-Out (Karttan Taşan)</button>
+      <button class="demo-btn" onclick="switchConcept('3')">3. Tipografik Katman</button>
+      <button class="demo-btn" onclick="switchConcept('4')">4. Blueprint Plaka</button>
     </div>
   </aside>
 
@@ -339,12 +468,11 @@
     <nav>
       <div class="brand">musa<span>Divarcı</span></div>
       <div class="menu">
-        <a href="#experience">Deneyim</a>
-        <a href="#projects">Projeler</a>
-        <a href="#articles">Yazılar</a>
-        <a href="#areas">Alanlar</a>
-        <a href="/professional-profile">Profesyonel Profil</a>
-        <a href="#nature">Doğa</a>
+        <a href="#">Deneyim</a>
+        <a href="#">Projeler</a>
+        <a href="#">Yazılar</a>
+        <a href="#">Alanlar</a>
+        <a href="#">Profesyonel Profil</a>
       </div>
     </nav>
     
@@ -359,14 +487,46 @@
               <div class="tagline">I had to do it the <strong>hard way</strong></div>
             </div>
 
-            <!-- VARYASYON A: Hero Sağ Portre Kartı -->
-            <div class="portrait-hero-card var-item var-A">
-              <div class="portrait-frame-a">
-                <img src="/musa-divarci.webp" alt="Musa DİVARCI — Yazılım Geliştirici ve Bilişim Profesyoneli" loading="eager" width="250" height="250">
+            <!-- KONSEPT 1: Atmosferik Işık Haleleri & Transparan Cutout -->
+            <div id="panel-1" class="var-panel active">
+              <div class="nextgen-halo-wrap">
+                <div class="nextgen-halo-backlight"></div>
+                <div class="floating-chip">Musa DİVARCI · Since 2001</div>
+                <img class="nextgen-halo-img" src="/musa-divarci-cutout.webp" alt="Musa DİVARCI">
               </div>
-              <div class="portrait-caption-a">
-                <strong>Musa DİVARCI</strong>
-                <span>VERIFIED TECH ENTITY · SINCE 2001</span>
+            </div>
+
+            <!-- KONSEPT 2: 3D Pop-Out (Karttan Taşan) -->
+            <div id="panel-2" class="var-panel">
+              <div class="nextgen-popout-wrap">
+                <div class="nextgen-popout-card">
+                  <div class="popout-card-label">
+                    <strong>MUSA DİVARCI</strong>
+                    <span>TECH ENTITY</span>
+                  </div>
+                </div>
+                <img class="nextgen-popout-img" src="/musa-divarci-cutout.webp" alt="Musa DİVARCI">
+              </div>
+            </div>
+
+            <!-- KONSEPT 3: Tipografik Katman (Magazine Cover) -->
+            <div id="panel-3" class="var-panel">
+              <div class="nextgen-typo-wrap">
+                <div class="nextgen-typo-ghost">MD</div>
+                <div class="nextgen-typo-tag">SYSTEMS · .NET</div>
+                <img class="nextgen-typo-img" src="/musa-divarci-cutout.webp" alt="Musa DİVARCI">
+              </div>
+            </div>
+
+            <!-- KONSEPT 4: Blueprint Grid Plate -->
+            <div id="panel-4" class="var-panel">
+              <div class="nextgen-blueprint-wrap">
+                <div class="nextgen-blueprint-plate">
+                  <div class="blueprint-corner-tl"></div>
+                  <div class="blueprint-corner-br"></div>
+                  <div class="blueprint-badge">ARCH // 39.9°N</div>
+                </div>
+                <img class="nextgen-blueprint-img" src="/musa-divarci-cutout.webp" alt="Musa DİVARCI">
               </div>
             </div>
 
@@ -374,18 +534,26 @@
         </div>
       </div>
 
+      <!-- Konsept Açıklamaları -->
+      <div id="desc-1" class="concept-card var-panel active">
+        <strong>Konsept 1: "Atmosferik Işık Haleleri (Halo)" — Tamamen Çerçevesiz & Havalı</strong>
+        Hiçbir çerçeve, kutu veya kart yok. Orijinal fotoğrafınızdan yapay zekayla dekupe edilen transparan silüetiniz doğrudan hero alanında süzülüyor. Arkasında keten gömleğinizin terakota tonuyla sitenin soğuk lacivertini harmanlayan derin bir atmosferik ışık halesi ve üzerinde cam efektli durum rozeti (`Musa DİVARCI · Since 2001`) yer alıyor.
+      </div>
+      <div id="desc-2" class="concept-card var-panel">
+        <strong>Konsept 2: "3D Pop-Out" — Kartın Dışına Taşan 3D Heykelsi Etki</strong>
+        Apple ve Awwwards sitelerinde sıkça görülen pop-out tekniği. Arkada modern buzlu cam bir kart durur, ancak başınız ve omuzlarınız kartın üstünden ve yanlarından 3D olarak dışarı taşar. Kutuya hapsolmamış, çok derinlikli ve dinamik bir duruş.
+      </div>
+      <div id="desc-3" class="concept-card var-panel">
+        <strong>Konsept 3: "Tipografik Katman" — Editoryal Dergi Kapağı Hissiyatı</strong>
+        Arka planda büyük şeffaf monogram harfler ("MD"), önünde transparan portreniz ve sağ altta minimalist teknik terakota etiket. Tipografiyle portrenin iç içe geçtiği üst düzey editoryal bir tasarım.
+      </div>
+      <div id="desc-4" class="concept-card var-panel">
+        <strong>Konsept 4: "Blueprint Plaka" — Mimari Izgara & Teknik Köşelikler</strong>
+        Arka planda nokta matrisli teknik mühendislik grid plakası, zıt köşelerde turuncu ve çelik mavisi mimari işaretleyiciler. Portre bu plakadan dışarıya taşarak mühendislik ve zanaat kimliğini vurgular.
+      </div>
+
       <div class="hero-grid">
         <div>
-          <!-- VARYASYON B: Hero Grid İçi Kompakt Profil Kartı -->
-          <div class="portrait-block-b var-item var-B" style="display: none;">
-            <img src="/musa-divarci.webp" alt="Musa DİVARCI" width="100" height="100">
-            <div class="portrait-b-info">
-              <div class="p-name">Musa DİVARCI</div>
-              <div class="p-title">.NET / C# · Clean Architecture · Enterprise IT</div>
-              <div class="p-status">Aktif & Bağımsız Geliştirici</div>
-            </div>
-          </div>
-
           <div class="role">Yazılım Geliştirici · Software Developer<br>.NET / C# · Systems · Architecture</div>
           <div class="hero-meta"><span>Since 2001</span><span>Türkiye</span></div>
           <div class="tech-line">C# <span>·</span> .NET <span>·</span> ASP.NET Core <span>·</span> SQL <span>·</span> Python <span>·</span> TypeScript <span>·</span> React <span>·</span> Cisco</div>
@@ -399,75 +567,18 @@
         </div>
       </div>
     </header>
-
-    <section id="nature">
-      <div class="nature-grid">
-        <div class="kicker">05 / Doğa ve Yaşam</div>
-        <div class="nature-copy">
-          <h2>Nature as a<br>way of life.</h2>
-          <p>Doğa benim için bir ilgi alanı ya da hafta sonu kaçamağı değil; yaşam biçiminin kendisi. Bitkilerle, toprakla, kırsal yaşamla ve mevsimlerin doğal ritmiyle kurduğum bağ gündelik hayatımın önemli bir parçası. Teknolojinin yoğunluğu içinde doğada olmak benim için bir denge arayışı değil, zaten tercih ettiğim hayatın doğal hali.</p>
-        </div>
-
-        <!-- VARYASYON C: Doğa & Felsefe Portre Kartı -->
-        <div class="nature-portrait-card var-item var-C" style="display: none;">
-          <img src="/musa-divarci.webp" alt="Musa DİVARCI — Kırsal Yaşam ve Mühendislik">
-          <div class="p-caption">
-            <strong>Musa DİVARCI</strong>
-            Yazılım mimarisindeki sadelik ve dayanıklılık prensiplerini, doğadaki doğal dengelerle bütünleştiren mühendislik felsefesi.
-          </div>
-        </div>
-
-        <div class="nature-note var-item var-note">
-          <strong>Sadelik ve Denge</strong>
-          Karmaşık sistemleri yönetirken doğanın yalınlığından beslenmek; yapay hırslardan uzak, sağlam temellere dayalı ve sürdürülebilir mimariler kurmanın en iyi yoludur.
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div>Musa DİVARCI · musadivarci.com.tr · 2001 - 2026</div>
-      <div class="footer-motto">I HAD TO DO IT THE HARD WAY</div>
-    </footer>
   </div>
 
   <script>
-    function setVariant(variant) {
-      document.querySelectorAll('.demo-btn').forEach(btn => btn.classList.remove('active'));
-      const buttons = document.querySelectorAll('.demo-btn');
-      if (variant === 'A') buttons[0].classList.add('active');
-      else if (variant === 'B') buttons[1].classList.add('active');
-      else if (variant === 'C') buttons[2].classList.add('active');
-      else if (variant === 'ALL') buttons[3].classList.add('active');
-
-      const itemA = document.querySelector('.var-A');
-      const itemB = document.querySelector('.var-B');
-      const itemC = document.querySelector('.var-C');
-      const itemNote = document.querySelector('.var-note');
-
-      if (variant === 'A') {
-        itemA.style.display = 'flex';
-        itemB.style.display = 'none';
-        itemC.style.display = 'none';
-        itemNote.style.display = 'block';
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      } else if (variant === 'B') {
-        itemA.style.display = 'none';
-        itemB.style.display = 'flex';
-        itemC.style.display = 'none';
-        itemNote.style.display = 'block';
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      } else if (variant === 'C') {
-        itemA.style.display = 'none';
-        itemB.style.display = 'none';
-        itemC.style.display = 'flex';
-        itemNote.style.display = 'block';
-        document.getElementById('nature').scrollIntoView({ behavior: 'smooth' });
-      } else if (variant === 'ALL') {
-        itemA.style.display = 'flex';
-        itemB.style.display = 'flex';
-        itemC.style.display = 'flex';
-        itemNote.style.display = 'block';
-      }
+    function switchConcept(id) {
+      document.querySelectorAll('.demo-btn').forEach((btn, index) => {
+        btn.classList.toggle('active', (index + 1) == id);
+      });
+      document.querySelectorAll('.var-panel').forEach(p => p.classList.remove('active'));
+      const activePanel = document.getElementById('panel-' + id);
+      if (activePanel) activePanel.classList.add('active');
+      const activeDesc = document.getElementById('desc-' + id);
+      if (activeDesc) activeDesc.classList.add('active');
     }
   </script>
 </body>

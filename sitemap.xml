@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.musadivarci.com.tr/</loc><lastmod>2026-10-14</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://www.musadivarci.com.tr/professional-profile</loc><lastmod>2026-10-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.musadivarci.com.tr/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.musadivarci.com.tr/musa-divarci.jpg</image:loc>
+      <image:title>Musa DİVARCI</image:title>
+      <image:caption>Musa DİVARCI — Yazılım Geliştirici ve Bilişim Profesyoneli</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.musadivarci.com.tr/professional-profile</loc>
+    <lastmod>2026-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.musadivarci.com.tr/musa-divarci.jpg</image:loc>
+      <image:title>Musa DİVARCI Profesyonel Profil</image:title>
+    </image:image>
+  </url>
   <url><loc>https://www.musadivarci.com.tr/classic-asp-modern-dotnet-gecisi</loc><lastmod>2026-10-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.musadivarci.com.tr/archive/meb-bt-koordinatorlugu</loc><lastmod>2026-10-14</lastmod><changefreq>yearly</changefreq><priority>0.5</priority></url>
   <url><loc>https://www.musadivarci.com.tr/llms.txt</loc><lastmod>2026-10-14</lastmod><changefreq>monthly</changefreq><priority>0.3</priority></url>
