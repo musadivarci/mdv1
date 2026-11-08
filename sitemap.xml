@@ -3,13 +3,18 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.musadivarci.com.tr/</loc>
-    <lastmod>2026-11-06</lastmod>
+    <lastmod>2026-11-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://www.musadivarci.com.tr/musa-divarci.jpg</image:loc>
       <image:title>Musa DİVARCI</image:title>
       <image:caption>Musa DİVARCI — Yazılım Geliştirici ve Bilişim Profesyoneli</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.musadivarci.com.tr/musa-divarci-nature.jpg</image:loc>
+      <image:title>Musa DİVARCI — Doğa</image:title>
+      <image:caption>Musa DİVARCI doğa ve kırsal yaşam</image:caption>
     </image:image>
   </url>
   <url>
