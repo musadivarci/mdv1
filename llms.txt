@@ -31,9 +31,21 @@ Within Türkiye's Ministry of National Education (MEB), his public technology ca
   Information architecture, structured data workflows, TypeScript and Python data processing tools.
   https://github.com/musadivarci/aegis
 
+- AI Nexus API — Multi-Provider Enterprise AI Gateway
+  ASP.NET Core 10 REST API with layered architecture and integrations for OpenAI, Google Gemini, Anthropic Claude and Azure OpenAI.
+  https://github.com/musadivarci/AI-Nexus-API
+
 - wondR — Personal Learning OS
   React, TypeScript and Supabase learning and knowledge retention application.
   https://github.com/musadivarci/wondr
+
+- Workout Tracker — Mobile-First Personal Training OS
+  Progressive-overload and workout-session tracker built with Next.js 15, React 19, Supabase SSR and PostgreSQL.
+  https://github.com/musadivarci/workout-tracker
+
+- Kura — Classroom Performance Evaluation System
+  Classroom lottery and continuous assessment application built with Node.js, SQLite in WAL mode, Tailwind CSS and Web Audio API.
+  https://github.com/musadivarci/Kura
 
 ## Technical articles
 
