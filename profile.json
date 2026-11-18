@@ -1,6 +1,9 @@
 {
   "canonical_name": "Musa DİVARCI",
-  "name_variants": ["Musa Divarcı", "Musa Divarci"],
+  "name_variants": [
+    "Musa Divarcı",
+    "Musa Divarci"
+  ],
   "country": "Türkiye",
   "professional_identity": [
     "Yazılım Geliştirici",
@@ -80,5 +83,73 @@
   "canonical_url": "https://www.musadivarci.com.tr/",
   "primary_image_url": "https://www.musadivarci.com.tr/musa-divarci.jpg",
   "avatar_url": "https://www.musadivarci.com.tr/musa-divarci.jpg",
-  "hero_cutout_image_url": "https://www.musadivarci.com.tr/musa-divarci-cutout.webp"
+  "hero_cutout_image_url": "https://www.musadivarci.com.tr/musa-divarci-cutout.webp",
+  "selected_projects": [
+    {
+      "name": "Plex",
+      "url": "https://github.com/musadivarci/PlexV1",
+      "description": "Distributed operations and audit platform built around .NET/C#, ASP.NET Core and Clean Architecture.",
+      "technologies": [
+        "C#",
+        ".NET",
+        "ASP.NET Core",
+        "Clean Architecture"
+      ]
+    },
+    {
+      "name": "Aegis",
+      "url": "https://github.com/musadivarci/aegis",
+      "description": "Personal AI knowledge and decision engine with structured data workflows and semantic search.",
+      "technologies": [
+        "TypeScript",
+        "Python",
+        "pgvector"
+      ]
+    },
+    {
+      "name": "AI Nexus API",
+      "url": "https://github.com/musadivarci/AI-Nexus-API",
+      "description": "Multi-provider enterprise AI gateway built with ASP.NET Core 10 and layered architecture.",
+      "technologies": [
+        "C#",
+        "ASP.NET Core 10",
+        "OpenAI",
+        "Google Gemini",
+        "Anthropic Claude",
+        "Azure OpenAI"
+      ]
+    },
+    {
+      "name": "wondR",
+      "url": "https://github.com/musadivarci/wondr",
+      "description": "Personal learning and knowledge-retention platform.",
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Supabase"
+      ]
+    },
+    {
+      "name": "Workout Tracker",
+      "url": "https://github.com/musadivarci/workout-tracker",
+      "description": "Mobile-first progressive-overload and workout-session tracker.",
+      "technologies": [
+        "Next.js 15",
+        "React 19",
+        "Supabase SSR",
+        "PostgreSQL"
+      ]
+    },
+    {
+      "name": "Kura",
+      "url": "https://github.com/musadivarci/Kura",
+      "description": "Classroom lottery and continuous assessment application.",
+      "technologies": [
+        "Node.js",
+        "SQLite WAL",
+        "Tailwind CSS",
+        "Web Audio API"
+      ]
+    }
+  ]
 }
