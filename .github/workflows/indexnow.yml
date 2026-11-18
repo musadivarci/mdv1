@@ -12,19 +12,106 @@ jobs:
   indexnow:
     runs-on: ubuntu-latest
     steps:
-      - name: Notify IndexNow about canonical URLs
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Notify IndexNow about changed canonical URLs
         shell: bash
+        env:
+          SITE_URL: https://www.musadivarci.com.tr
+          INDEXNOW_KEY: 6b8d3f1a9c4e72f0d5a6138b7e2c904f
+          EVENT_NAME: ${{ github.event_name }}
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.sha }}
         run: |
-          KEY="6b8d3f1a9c4e72f0d5a6138b7e2c904f"
-          urls=(
-            "https://mdv1.vercel.app/"
-            "https://mdv1.vercel.app/professional-profile.html"
-            "https://mdv1.vercel.app/llms.txt"
+          set -euo pipefail
+
+          urls=()
+
+          if [[ "$EVENT_NAME" == "workflow_dispatch" ]]; then
+            # A manual run intentionally re-submits the canonical URLs in the sitemap.
+            while IFS= read -r url; do
+              [[ -n "$url" ]] && urls+=("$url")
+            done < <(python3 - <<'PY'
+          import xml.etree.ElementTree as ET
+
+          site = "https://www.musadivarci.com.tr"
+          root = ET.parse("sitemap.xml").getroot()
+          namespace = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+
+          for node in root.findall("sm:url/sm:loc", namespace):
+              url = (node.text or "").strip()
+              if url.startswith(site + "/") or url == site:
+                  print(url)
+          PY
+            )
+          else
+            changed_files=()
+
+            if [[ "$BEFORE_SHA" =~ ^0+$ ]]; then
+              mapfile -t changed_files < <(git ls-tree -r --name-only "$AFTER_SHA")
+            else
+              mapfile -t changed_files < <(
+                git diff --name-only "$BEFORE_SHA" "$AFTER_SHA" -- '*.html' 'llms.txt'
+              )
+            fi
+
+            for path in "${changed_files[@]}"; do
+              case "$path" in
+                index.html)
+                  route="/"
+                  ;;
+                */index.html)
+                  route="/${path%/index.html}"
+                  ;;
+                *.html)
+                  route="/${path%.html}"
+                  ;;
+                llms.txt)
+                  route="/llms.txt"
+                  ;;
+                *)
+                  continue
+                  ;;
+              esac
+
+              # Encode each path segment while preserving URL separators.
+              encoded_route=$(python3 - "$route" <<'PY'
+          import sys
+          from urllib.parse import quote
+
+          route = sys.argv[1]
+          print("/".join(quote(part, safe="") for part in route.split("/")))
+          PY
+              )
+              urls+=("${SITE_URL}${encoded_route}")
+            done
+          fi
+
+          if [[ "${#urls[@]}" -eq 0 ]]; then
+            echo "No indexable page changes found; skipping IndexNow."
+            exit 0
+          fi
+
+          payload=$(python3 - "$INDEXNOW_KEY" "${urls[@]}" <<'PY'
+          import json
+          import sys
+
+          key = sys.argv[1]
+          urls = list(dict.fromkeys(sys.argv[2:]))
+          print(json.dumps({
+              "host": "www.musadivarci.com.tr",
+              "key": key,
+              "keyLocation": f"https://www.musadivarci.com.tr/{key}.txt",
+              "urlList": urls,
+          }))
+          PY
           )
-          for url in "${urls[@]}"; do
-            encoded=$(python3 -c 'import sys,urllib.parse; print(urllib.parse.quote(sys.argv[1], safe=""))' "$url")
-            echo "Submitting $url"
-            curl --fail-with-body --retry 3 --retry-delay 3 \
-              "https://api.indexnow.org/indexnow?url=${encoded}&key=${KEY}"
-            echo
-          done
+
+          echo "Submitting ${#urls[@]} canonical URL(s) to IndexNow."
+          curl --fail-with-body --retry 3 --retry-delay 3 --max-time 30 \
+            -H "Content-Type: application/json; charset=utf-8" \
+            --data-binary "$payload" \
+            "https://api.indexnow.org/indexnow"
