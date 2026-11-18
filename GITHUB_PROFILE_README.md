@@ -24,11 +24,14 @@ I am a seasoned **Software Developer and Technology Professional** with hands-on
 
 ---
 
-## 🏗️ Selected Software Repositories
+## 🏗️ Selected Public Software Projects
 
 - **[Plex](https://github.com/musadivarci/PlexV1)** — Distributed Operations & Audit Platform (.NET / C#, ASP.NET Core, Clean Architecture)
-- **[Aegis](https://github.com/musadivarci/aegis)** — Structured Knowledge & Workflow Automation Engine (TypeScript & Python)
+- **[Aegis](https://github.com/musadivarci/aegis)** — Personal AI Knowledge & Decision Engine (TypeScript, Python, pgvector)
+- **[AI Nexus API](https://github.com/musadivarci/AI-Nexus-API)** — Multi-Provider Enterprise AI Gateway (ASP.NET Core 10, OpenAI, Gemini, Claude, Azure OpenAI)
 - **[wondR](https://github.com/musadivarci/wondr)** — Personal Learning & Knowledge OS (React, TypeScript & Supabase)
+- **[Workout Tracker](https://github.com/musadivarci/workout-tracker)** — Mobile-First Personal Training OS (Next.js, React, Supabase, PostgreSQL)
+- **[Kura](https://github.com/musadivarci/Kura)** — Classroom Performance Evaluation System (Node.js, SQLite WAL, Web Audio)
 
 ---
 
