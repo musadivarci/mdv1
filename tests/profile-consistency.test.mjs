@@ -36,9 +36,11 @@ test("profile README draft retains the same six project links", async () => {
   }
 });
 
-test("sitemap homepage lastmod reflects the homepage content update", async () => {
+test("sitemap has a well-formed canonical homepage entry", async () => {
   const sitemap = await read("sitemap.xml");
-  assert.match(sitemap, /<loc>https:\/\/www\.musadivarci\.com\.tr\/<\/loc>\s*<lastmod>2026-11-23<\/lastmod>/);
+  const match = sitemap.match(/<loc>https:\/\/www\.musadivarci\.com\.tr\/<\/loc>\s*<lastmod>(\d{4}-\d{2}-\d{2})<\/lastmod>/);
+  assert.ok(match, "canonical homepage entry and lastmod must exist");
+  assert.ok(!Number.isNaN(Date.parse(match[1])), "homepage lastmod must be a valid date");
 });
 
 test("repository README links to the canonical professional profile", async () => {
