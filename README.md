@@ -6,9 +6,12 @@ The site presents a technology career spanning professional software development
 
 ## Public project evidence
 
-- [Plex](https://github.com/musadivarci/PlexV1) — .NET / C# backend architecture, Clean Architecture & background services
-- [Aegis](https://github.com/musadivarci/aegis) — Knowledge engine, structured workflows and Python data tooling
-- [wondR](https://github.com/musadivarci/wondr) — TypeScript / React product development
+- [Plex](https://github.com/musadivarci/PlexV1) — Distributed operations and audit platform built around .NET / C#, ASP.NET Core and Clean Architecture
+- [Aegis](https://github.com/musadivarci/aegis) — Personal AI knowledge and decision engine using TypeScript, Python and pgvector
+- [AI Nexus API](https://github.com/musadivarci/AI-Nexus-API) — Multi-provider enterprise AI gateway built with ASP.NET Core 10
+- [wondR](https://github.com/musadivarci/wondr) — Personal learning and knowledge-retention platform built with React, TypeScript and Supabase
+- [Workout Tracker](https://github.com/musadivarci/workout-tracker) — Mobile-first workout tracker built with Next.js, React, Supabase and PostgreSQL
+- [Kura](https://github.com/musadivarci/Kura) — Classroom lottery and continuous assessment application using Node.js, SQLite WAL, Tailwind CSS and Web Audio API
 
 ## Technical articles
 
@@ -28,3 +31,5 @@ The repository includes:
 ## Deployment
 
 Production URL: [https://www.musadivarci.com.tr](https://www.musadivarci.com.tr)
+
+Professional profile: [https://www.musadivarci.com.tr/professional-profile](https://www.musadivarci.com.tr/professional-profile)
