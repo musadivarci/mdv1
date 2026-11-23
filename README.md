@@ -23,7 +23,7 @@ The repository includes:
 
 - Schema.org JSON-LD (Person, ProfilePage, SoftwareSourceCode)
 - Canonical URLs and OpenGraph / social metadata
-- obots.txt
+- robots.txt
 - sitemap.xml
 - llms.txt
 - Explicit bidirectional links between professional identity and public software repositories
