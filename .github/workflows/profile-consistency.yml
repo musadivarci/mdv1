@@ -1,0 +1,49 @@
+name: Profile Consistency
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "index.html"
+      - "professional-profile.html"
+      - "classic-asp-modern-dotnet-gecisi.html"
+      - "profile.json"
+      - "schema.jsonld"
+      - "llms.txt"
+      - "GITHUB_PROFILE_README.md"
+      - "README.md"
+      - "sitemap.xml"
+      - "robots.txt"
+      - ".github/workflows/indexnow.yml"
+      - ".github/workflows/profile-consistency.yml"
+      - "tests/**"
+  push:
+    branches: [main]
+    paths:
+      - "index.html"
+      - "professional-profile.html"
+      - "classic-asp-modern-dotnet-gecisi.html"
+      - "profile.json"
+      - "schema.jsonld"
+      - "llms.txt"
+      - "GITHUB_PROFILE_README.md"
+      - "README.md"
+      - "sitemap.xml"
+      - "robots.txt"
+      - ".github/workflows/indexnow.yml"
+      - ".github/workflows/profile-consistency.yml"
+      - "tests/**"
+
+permissions:
+  contents: read
+
+jobs:
+  consistency:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Run profile consistency tests
+        run: |
+          node --version
+          node --test tests/profile-consistency.test.mjs
