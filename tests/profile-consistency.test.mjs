@@ -61,3 +61,14 @@ test("IndexNow workflow logs each URL and only accepts documented success status
   assert.ok(workflow.includes('"keyLocation": f"https://www.musadivarci.com.tr/{key}.txt"'));
   assert.ok(workflow.includes("actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1"));
 });
+
+
+test("article author uses the canonical Person identity and sameAs links", async () => {
+  const article = await read("classic-asp-modern-dotnet-gecisi.html");
+  const articleGraph = JSON.parse(article.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/i)[1]);
+  const articlePerson = articleGraph.author;
+  const schema = JSON.parse(await read("schema.jsonld"));
+  const canonicalPerson = schema["@graph"].find((entity) => entity["@type"] === "Person");
+  assert.equal(articlePerson["@id"], canonicalPerson["@id"]);
+  assert.deepEqual(articlePerson.sameAs, canonicalPerson.sameAs);
+});
