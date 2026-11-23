@@ -77,7 +77,7 @@ test("article author uses the canonical Person identity and sameAs links", async
 test("professional profile and llms.txt expose the same six projects", async () => {
   const profile = await read("professional-profile.html");
   const llms = await read("llms.txt");
-  assert.ok(profile.includes('href="https://www.musadivarci.com.tr/professional-profile"') === false || profile.includes('<link rel="canonical" href="https://www.musadivarci.com.tr/professional-profile">'));
+  assert.ok(profile.includes('<link rel="canonical" href="https://www.musadivarci.com.tr/professional-profile">'));
   assert.ok(llms.includes("Professional profile: https://www.musadivarci.com.tr/professional-profile"));
   for (const [name, url] of selectedProjects) {
     assert.ok(profile.includes(url), "professional profile is missing " + name);
