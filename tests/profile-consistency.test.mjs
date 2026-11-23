@@ -72,3 +72,22 @@ test("article author uses the canonical Person identity and sameAs links", async
   assert.equal(articlePerson["@id"], canonicalPerson["@id"]);
   assert.deepEqual(articlePerson.sameAs, canonicalPerson.sameAs);
 });
+
+
+test("professional profile and llms.txt expose the same six projects", async () => {
+  const profile = await read("professional-profile.html");
+  const llms = await read("llms.txt");
+  assert.ok(profile.includes('href="https://www.musadivarci.com.tr/professional-profile"') === false || profile.includes('<link rel="canonical" href="https://www.musadivarci.com.tr/professional-profile">'));
+  assert.ok(llms.includes("Professional profile: https://www.musadivarci.com.tr/professional-profile"));
+  for (const [name, url] of selectedProjects) {
+    assert.ok(profile.includes(url), "professional profile is missing " + name);
+    assert.ok(llms.includes(url), "llms.txt is missing " + name);
+  }
+});
+
+test("robots.txt allows crawling and points to the canonical sitemap", async () => {
+  const robots = await read("robots.txt");
+  assert.ok(robots.includes("User-agent: *"));
+  assert.ok(robots.includes("Allow: /"));
+  assert.ok(robots.includes("Sitemap: https://www.musadivarci.com.tr/sitemap.xml"));
+});
