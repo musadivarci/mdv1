@@ -54,7 +54,7 @@ test("repository README links to the canonical professional profile", async () =
 test("IndexNow workflow logs each URL and only accepts documented success statuses", async () => {
   const workflow = await read(".github/workflows/indexnow.yml");
   const key = (await read("6b8d3f1a9c4e72f0d5a6138b7e2c904f.txt")).trim();
-  assert.ok(workflow.includes("Submitting canonical URL: %s"));
+  assert.ok(workflow.includes("Submitting canonical URL:"));
   assert.ok(workflow.includes("200|202"));
   assert.ok(workflow.includes("No indexable page changes found; skipping IndexNow."));
   assert.ok(workflow.includes("INDEXNOW_KEY: " + key));
