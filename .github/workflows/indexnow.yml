@@ -111,8 +111,35 @@ jobs:
           )
 
           echo "Submitting ${#urls[@]} canonical URL(s) to IndexNow."
-          curl --silent --show-error --fail-with-body --retry 3 --retry-delay 3 --max-time 30 \
+          printf 'Submitting canonical URL: %s\\n' "${urls[@]}"
+
+          response_file=$(mktemp)
+          trap 'rm -f "$response_file"' EXIT
+
+          set +e
+          http_code=$(curl --silent --show-error --fail-with-body --retry 3 --retry-delay 3 --max-time 30 \
             -H "Content-Type: application/json; charset=utf-8" \
             --data-binary "$payload" \
-            --write-out '\nIndexNow HTTP %{http_code}\n' \
-            "https://api.indexnow.org/indexnow"
+            --output "$response_file" \
+            --write-out '%{http_code}' \
+            "https://api.indexnow.org/indexnow")
+          curl_status=$?
+          set -e
+
+          if [[ -s "$response_file" ]]; then
+            cat "$response_file"
+          fi
+          echo "IndexNow HTTP ${http_code:-unknown}"
+
+          if [[ "$curl_status" -ne 0 ]]; then
+            exit "$curl_status"
+          fi
+
+          case "$http_code" in
+            200|202)
+              ;;
+            *)
+              echo "::error::IndexNow returned unexpected HTTP status: ${http_code:-unknown}" >&2
+              exit 1
+              ;;
+          esac
