@@ -48,3 +48,15 @@ test("repository README links to the canonical professional profile", async () =
   assert.ok(readme.includes("https://www.musadivarci.com.tr/professional-profile"));
   assert.ok(readme.includes("- robots.txt"));
 });
+
+
+test("IndexNow workflow logs each URL and only accepts documented success statuses", async () => {
+  const workflow = await read(".github/workflows/indexnow.yml");
+  const key = (await read("6b8d3f1a9c4e72f0d5a6138b7e2c904f.txt")).trim();
+  assert.ok(workflow.includes("Submitting canonical URL: %s\\n"));
+  assert.ok(workflow.includes("200|202"));
+  assert.ok(workflow.includes("No indexable page changes found; skipping IndexNow."));
+  assert.ok(workflow.includes("INDEXNOW_KEY: " + key));
+  assert.ok(workflow.includes("keyLocation: f\\"https://www.musadivarci.com.tr/{key}.txt\\""));
+  assert.ok(workflow.includes("actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1"));
+});
