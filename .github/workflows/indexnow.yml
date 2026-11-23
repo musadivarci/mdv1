@@ -111,7 +111,9 @@ jobs:
           )
 
           echo "Submitting ${#urls[@]} canonical URL(s) to IndexNow."
-          printf 'Submitting canonical URL: %s\\n' "${urls[@]}"
+          for url in "${urls[@]}"; do
+            echo "Submitting canonical URL: $url"
+          done
 
           response_file=$(mktemp)
           trap 'rm -f "$response_file"' EXIT
