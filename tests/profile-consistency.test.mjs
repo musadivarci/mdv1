@@ -58,6 +58,6 @@ test("IndexNow workflow logs each URL and only accepts documented success status
   assert.ok(workflow.includes("200|202"));
   assert.ok(workflow.includes("No indexable page changes found; skipping IndexNow."));
   assert.ok(workflow.includes("INDEXNOW_KEY: " + key));
-  assert.ok(workflow.includes('keyLocation: f"https://www.musadivarci.com.tr/{key}.txt"'));
+  assert.ok(workflow.includes('"keyLocation": f"https://www.musadivarci.com.tr/{key}.txt"'));
   assert.ok(workflow.includes("actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1"));
 });
